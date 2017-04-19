@@ -1,0 +1,487 @@
+@charset "utf-8";
+//居中
+$center:0 auto;
+//字体样式
+@mixin font($size,$weight,$lineheight,$color,$location){
+    font-size:$size;
+    font-weight:$weight;
+    line-height:$lineheight;
+    color:$color;
+    text-align:$location;
+}
+//定位
+@mixin position($type,$top,$right,$bottom,$left){    
+    position:$type;  
+    top:$top;
+    right:$right;
+    bottom:$bottom;
+    left:$left;
+}
+//多行文本溢出
+@mixin ellipsis($count){
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+}
+//默认字体选中背景色和字体样色
+::selection{
+background:#1bba9e;
+color:#fff;
+}
+*{  
+    margin:0;
+    padding:0;
+}
+body,html{
+    @include position(relative,null,null,null,null);
+    width:100%;
+    height:100%;
+    font-family: "Microsoft YaHei",SimSun,sans-serif;
+    z-index:-1000;
+    background: url(../images/bg.jpg) #f5f2eb top center no-repeat;
+}
+//头部导航
+#header{
+    position:relative;
+    width:9.8rem;
+    height:2rem; 
+    margin:0 auto;  
+    .logo{
+        @include position(absolute,0.4rem,null,null,0.4rem);
+        width:1rem;
+        height:1rem;
+        background:url(../images/logo.gif) no-repeat center center;
+    }
+    .header_nav1{
+        width:100%;
+        height:0.35rem;
+        padding-top:0.15rem;
+        li{
+            float:right;
+            width:0.7rem;
+            height:0.2rem;
+            a{
+                display:block;
+                float:right;
+                width: 0.7rem;
+                height:0.2rem;
+                margin-right:0.2rem;                
+                @include font(0.12rem,null,0.2rem,null,center);
+                text-decoration: none;
+                color:#3c3c3c;
+            }
+        }
+    }    
+    .header_nav2{
+        float:right;
+        margin-top:0.2rem;
+        width:auto !important;
+        min-width: 6rem;
+        width:6rem;
+        height:1.6rem;
+        li{    
+            float:left;
+            width:0.9rem;
+            width:auto !important;
+            min-width:0.9rem;
+            height:1.6rem;
+            overflow: hidden;
+            .level1{  
+                display:block;
+                float:left;
+                width:0.9rem;
+                height:1.6rem;
+                box-sizing:border-box;
+                color:#424242;
+            }
+            .level2{  
+                display:block;
+                float:left;
+                width:0;
+                height:1.6rem;
+                writing-mode: tb-rl;
+                box-sizing:border-box;
+                color:#424242;
+                text-align: center;
+                text-decoration: none;
+                @include font(0.14rem,null,0.2rem,null,center);
+                overflow: hidden;
+            }
+        }
+    }
+}
+//导航标签
+#header .header_nav2 li .level1 .nav_title{
+    width:0.4rem;
+    height:80%;
+    padding-top:20%;
+    margin:0 auto;
+    h1{
+        float:left;
+        width:0.2rem;
+        height:100%;
+        margin:0;
+        @include font(0.18rem,null,0.2rem,null,null)
+    }
+    h5{
+        float:left;
+        width:0.2rem;
+        height:0.2rem;
+        margin:0;
+        font-family: "Segoe UI",Arial,sans-serif;
+        @include font(0.12rem,null,0.2rem,null,null);
+        text-indent: 0.5em;
+        transform: rotate(90deg);
+        transform-origin:center 0.1rem;
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -ms-transform-origin:center 0.1rem; /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Safari and Chrome */
+        -webkit-transform-origin:center 0.1rem; /* Safari and Chrome */
+    }
+}
+//导航条鼠标滑过样式改变
+#header .header_nav2 li:hover{
+    border-top:5px solid #8c8c8c;
+    border-radius:0 0 0.1rem 0.1rem;
+    color:white;
+    background:#1bba9e url(../images/nav_bg.png) no-repeat right bottom;
+}
+#header .header_nav2 li:hover a{
+    color:white;
+}
+//内容区域
+#main{
+    width:9.8rem;
+    height:6rem;
+    height:auto !important;
+    min-height:6rem;
+    margin:0 auto;
+    padding:0.5rem 0.1rem 0;
+    .main_con{
+        width:100%;
+        height:6rem;
+        height:auto !important;
+        min-height:6rem;
+        margin:0 auto;
+        .t_tickets{
+            width:100%;
+            height:3rem;
+            height:auto !important;
+            min-height:3rem;
+            h3{ 
+                width:100%;
+                height:0.25rem;           
+                font-size: 0.18rem;
+                line-height:0.25rem;
+                color: #af370a;
+                border-bottom: 1px #000 solid;
+                overflow: hidden;
+                margin:0;     
+                span{
+                    display:inline-block;
+                    margin-left:0.05rem;
+                    height:100%;
+                    padding:0 0.2rem;
+                    margin-bottom:-2px;              
+                }      
+                .food_active{
+                    box-sizing: border-box;
+                    border:1px solid #1bba9e;
+                    border-radius: 0.05rem 0.05rem 0 0;
+                    background:#1bba9e; 
+                    color:white;  
+                } 
+                a{
+                    display:inline-block;
+                    float:right;
+                    margin-right:0.1rem;
+                    @include font(0.14rem,600,0.25rem,#af370a,center);
+                    text-decoration: none;
+                }
+              
+            }
+            .ol_order{
+                width:100%;
+                height:2rem;
+                height:auto !important;
+                min-height:2rem;
+                padding-top:0.1rem;
+                //票务
+                .btn-primary{
+                    background:#1bba9e;
+                    border:0;
+                }
+                //餐饮住宿
+                .accommodation{
+                    width:100%;
+                    height:2rem;
+                    height:auto !important;
+                    min-height:2rem;
+                    margin:0;
+                    a{  
+                        position:relative;
+                        display:block;
+                        height:2rem;
+                        padding:0;
+                        overflow: hidden;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                        font-family: "宋体";
+                        text-decoration: none;
+                        @include font(0.12rem,null,0.5rem,white,null);
+                        img{
+                            display:block;
+                            width:100%;
+                            height:100%;
+                        }
+                        .accommodation_title{
+                            @include position(absolute,null,null,0,0);
+                            width:100%;
+                            height:0.5rem;
+                            padding-left:0.1rem;
+                            background:rgba(0,0,0,0.4);
+                            span{                                
+                                display:inline-block;                               
+                            }
+                            span:nth-child(2){
+                                float:right;
+                                font-family: "微软雅黑";
+                                color:#af370a;
+                                margin-right:0.1rem;
+                                font-size:0.14rem;
+                            }
+                            span:nth-child(3){
+                                float:right;
+                                font-family: "微软雅黑";
+                                color:#af370a;
+                                margin-right:0.1rem;
+                                font-size:0.14rem;
+                            }
+                        }
+                    }   
+                    .accommodation_con{
+                        height:2rem;
+                        h5{
+                           font-size:0.16rem;
+                        };
+                        p{
+                            text-indent:2em;
+                            overflow : hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 6;
+                            -webkit-box-orient: vertical;
+                            color:#666;
+                        }
+                        a{
+                            display:inline-block;
+                            float:right;
+                            height:0.2rem;
+                            margin-right:0.1rem;
+                            color:#999;
+                            line-height: 0.2rem;
+                        }
+                    }
+                }
+                //餐饮美食
+                .food{
+                    display:none;
+                    width:100%;
+                    height:2rem;
+                    height:auto !important;
+                    min-height:2rem;
+                    margin:0;
+                    a{  
+                        position:relative;
+                        display:block;
+                        height:2rem;
+                        padding:0;
+                        overflow: hidden;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                        font-family: "宋体";
+                        @include font(0.12rem,null,0.5rem,white,null);
+                        img{
+                            display:block;
+                            width:100%;
+                            height:100%;
+                        }
+                        .food_title{
+                            @include position(absolute,null,null,0,0);
+                            width:100%;
+                            height:0.5rem;
+                            padding-left:0.1rem;
+                            background:rgba(0,0,0,0.4);
+                            span{                                
+                                display:inline-block;                               
+                            }
+                            span:nth-child(2){
+                                float:right;
+                                font-family: "微软雅黑";
+                                color:#af370a;
+                                margin-right:0.1rem;
+                                font-size:0.14rem;
+                            }
+                            span:nth-child(3){
+                                float:right;
+                                font-family: "微软雅黑";
+                                color:#af370a;
+                                margin-right:0.1rem;
+                                font-size:0.14rem;
+                            }
+                        }
+                        .food_con{
+                            @include position(absolute,100%,null,0,0);
+                            width:100%;
+                            height:100%;
+                            color:#ccc;
+                            line-height:0.2rem;
+                            padding:0.1rem;
+                            background:rgba(0,0,0,0.4);
+                            overflow:hidden;
+                            h5{
+                                color:white;
+                            };
+                            p{
+                                text-indent:2em;
+                                overflow : hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 6;
+                                -webkit-box-orient: vertical;
+                            }
+                        }
+                    }
+                }
+                //路线查询
+                .t_route{
+                    width:100%;
+                    height:2rem;
+                    height:auto !important;
+                    min-height:2rem;
+                    margin:0;
+                    list-style: none;
+                    overflow: hidden;
+                    .t_route_info{       
+                        display:flex;
+                        display:-webkit-flex;     
+                        flex-direction:row;            
+                        height:0.9rem;
+                        padding:0.15rem 0;
+                        .t_pic{
+                            width:0.6rem;
+                            height:0.6rem;
+                            margin-right:0.1rem;
+                            img{
+                                display:block;
+                                width:100%;
+                                height:100%;                                
+                            }
+                        }   
+                        .t_info{
+                            flex:1;
+                            height:0.6rem;
+                            .t_name{
+                                width:100%;
+                                height:0.2rem;
+                                span{
+                                    display:inline-block;
+                                    float:right;
+                                    margin-right:0.05rem;
+                                     @include font(0.14rem,null,0.2rem,#af370a,null);
+                                }
+                            }
+                            .t_con{
+                                width:100%;
+                                height:0.4rem;
+                                text-indent:2em;
+                                @include font(0.14rem,null,0.18rem,#696969,null);
+                            }
+                        }                
+                    }
+                    .t_route_info:nth-child(2n+1){
+                        padding-right:0.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+#footer{
+    width:9.8rem;
+    height:1.7rem;
+    margin:$center;
+    h3{
+        width:100%;
+        height:0.3rem;
+        margin-bottom: 0.2rem;
+        box-sizing: border-box;
+        padding-bottom: 0.1rem;
+        font-size:0.14rem;
+        border-bottom: 1px #7d7159 solid;
+        strong,a{
+                display:block;
+                float: left;
+                margin-right: 0.06rem;
+                line-height: 0.2rem;
+                color: #7d7159;
+        }
+    }
+    .footer_con{
+       width:100%;
+       height:1.2rem; 
+       .footer_con_left{
+           float:left;
+           width:4.8rem;
+           height:1.2rem;
+           p{
+                float: left;
+                width: 100%;
+                line-height: 0.24rem;
+                color: #7d7159;
+                overflow: hidden;
+                word-wrap: break-word;
+                word-break: break-all;
+                text-align: justify;
+           }
+       }
+       .footer_con_right{
+           float:left;
+           width:4.3rem;
+           height:0.8rem;
+           margin-left:0.7rem;
+           img{
+               display:block;
+                width:100%;
+                height:100%;
+           }
+       }
+    }
+}
+#t_bg{
+    z-index: -1111;
+    @include position(fixed,null,null,0,0);
+    width:100%;
+    height:4rem;
+    background:url(../img/absolute_footer.jpg);
+    background-size: cover;
+    -webkit-background-size:cover ;
+}
+@media screen and (max-width: 980px) {
+    #banner{
+        height:3.2rem;
+    }
+    #header{
+        width:100%;
+        height:2rem; 
+        margin-bottom:1.2rem;       
+    }
+    .separated_left .separated_right{
+        display:none;
+    }
+    #main{
+        width:100%;
+    }
+}
