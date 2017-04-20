@@ -49,5 +49,40 @@ $(function(){
 		})
 	})
 	
+	/**
+	 * 	二级页面 选项卡效果实现
+	 */
+	$(".t_nav_list li").click(function(){
+		console.log($(this).index())
+		console.log($(this).find("a").eq(0).html())
+		var index = $(this).index();
+//		标签列表颜色改变
+		$(this).find("a").css("color","#af370a");
+		$(this).siblings().find("a").css("color","#3c3c3c");
+//		获取导航标签内容
+		var listCon = $(this).find("a").eq(0).html();
+		$(".t_sub_process span:nth-last-child(1)").html(listCon);
+//		导航标签内容选项卡
+		$(".t_sub_conlist").eq(index).css("display","block");
+		$(".t_sub_conlist").eq(index).siblings().css("display","none");
+	})
+	$(".t_nav_list li").eq(0).trigger("click");
+	
+	
+	/**
+	 * 景区介绍轮播图
+	 */
+	console.log( $(".t_attractionsbox_position li:eq(0)").outerWidth())
+	console.log( $(".t_attractionsbox_position li").length)
+	console.log( $(".t_attractionsbox_position").css("left"))
+	function shuffling(direction){
+		//由参数判断轮播图滑动方向，+右 -左
+		console.log(1)
+		var direc = 1*direction;
+		var width = $(".t_attractionsbox_position li:eq(0)").width();
+		var allNum = $(".t_attractionsbox_position li").length;		
+		var count = 0;
+		$(".t_attractionsbox_position").animate({"left":direc*width},500)
+	}
 })
 

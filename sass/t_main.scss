@@ -107,8 +107,13 @@ body,html{
         width:6rem;
         height:1.6rem;
         li{    
-                float:left;
-            a{  
+            float:left;
+            width:0.9rem;
+            width:auto !important;
+            min-width:0.9rem;
+            height:1.6rem;
+            overflow: hidden;
+            .level1{  
                 display:block;
                 float:left;
                 width:0.9rem;
@@ -116,11 +121,25 @@ body,html{
                 box-sizing:border-box;
                 color:#424242;
             }
+            .level2{  
+                display:block;
+                float:left;
+                width:0;
+                height:1.6rem;
+                writing-mode: tb-rl;
+                box-sizing:border-box;
+                color:#424242;
+                text-align: center;
+                text-decoration: none;
+                @include font(0.14rem,null,0.2rem,null,center);
+                overflow: hidden;
+            }
         }
     }
 }
+
 //导航标签
-#header .header_nav2 li a .nav_title{
+#header .header_nav2 li .level1 .nav_title{
     width:0.4rem;
     height:80%;
     padding-top:20%;
@@ -138,7 +157,7 @@ body,html{
         height:0.2rem;
         margin:0;
         font-family: "Segoe UI",Arial,sans-serif;
-         @include font(0.12rem,null,0.2rem,null,null);
+        @include font(0.12rem,null,0.2rem,null,null);
         text-indent: 0.5em;
         transform: rotate(90deg);
         transform-origin:center 0.1rem;
@@ -149,11 +168,14 @@ body,html{
     }
 }
 //导航条鼠标滑过样式改变
-#header .header_nav2 li a:hover{
+#header .header_nav2 li:hover{
     border-top:5px solid #8c8c8c;
     border-radius:0 0 0.1rem 0.1rem;
-    color:#ebf1e9;
+    color:white;
     background:#1bba9e url(../images/nav_bg.png) no-repeat right bottom;
+}
+#header .header_nav2 li:hover a{
+    color:white;
 }
 //分隔标题
 #separated{
