@@ -58,7 +58,7 @@ small {
   font-size: 12px;
 }
 ul,
-ol {
+ol,li{
   list-style: none;
 }
 a{

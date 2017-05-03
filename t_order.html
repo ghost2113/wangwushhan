@@ -11,9 +11,11 @@
 		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="libs/css/swiper-3.4.0.min.css" />
 		<link rel="stylesheet" href="css/t_order.css"/>
+		<link rel="stylesheet" href="libs/css/datepicker.css" />
 		<script type="text/javascript" src="libs/js/rem.js" ></script>
 		<script type="text/javascript"src="libs/js/swiper-3.4.0.min.js"></script>
 		<script type="text/javascript" src="libs/js/jquery-1.11.3.js" ></script>
+		<script type="text/javascript" src="libs/js/bootstrap-datepicker.js" ></script>
 	</head>
 	<body>
 		<header id="header">
@@ -101,13 +103,93 @@
 				</li>				
 			</ul>
 		</header>
+		
 		<section id="main">
 			<div class="main_con">
-				<div class="t_tickets well">
+				<!--门票预订-->
+				<div class="t_tickets">
+					
 					<h3>门票预订<a href="#">More</a></h3>
-					<div class="ol_order">
-						<div class="row">
-						  <div class="col-sm-6 col-md-3">
+					<div class="ol_order row">
+						  <div class="col-sm-6 col-md-4 ol_order_left">
+						    <div class="thumbnail">
+						    	<div class="change_scenic">
+						    		<li class="change_scenic_active">王屋山</li>
+						    		<li>五龙口</li>
+						    	</div>
+								<form class="t_online_ticket">									
+									<h5>出发日期</h5>
+									<li><input class="getCalendar" type="text" placeholder="" /><span class="iconfont">&#xe608;</span></li>
+									<h5>票务类型</h5>
+									<li>
+										<select class="form-control">
+										  <option>成人票</option>
+										  <option>学生票</option>
+										  <option>景点+酒店</option>
+										  <option>团体</option>
+										</select>
+									</li>	
+									<li></li>
+									<li class="t_order"><input type="button" value="预订"/></li>
+								</form>
+						    </div>
+						  </div>
+						  <div class="col-sm-6 col-md-8 ol_order_right">
+						  	<ul>
+								<li>
+									<div class="scenic_img"></div>
+									<a class="des">
+										王屋山云海
+									</a>
+									<div class="scenic_info">
+										<p>王屋山云海王屋山云海王屋山云海王屋山云海王屋山云海王屋山云海王屋山云海
+										王屋山云海王屋山云海王屋山云海王屋山云海王屋山云海王屋山云海王屋山云海</p>
+										<a href="#">详情</a>
+									</div>
+								</li>
+							<li>
+									<div class="scenic_img"></div>
+									<a class="des">
+										阳台宫
+									</a>
+									<div class="scenic_info">
+										<p>阳台宫在王屋山脚下愚公村的西侧，是王屋山旅游线路的起点。阳台宫现存的主体建筑三清殿和玉皇阁为明正德年间重修。最为瞩目的是三重檐阁式建筑玉皇阁，凌空欲飞的飘逸之势，令人叹为观止。主体建筑上的几十对石刻柱子，使这座宗教圣地成为石刻艺术的殿堂;柱子上刻有翻滚的云龙、朝风的百鸟、闹梅的喜鹊、牧羊的苏武;过海的八仙、战蚩尤的黄帝等。阳台宫内苍松翠柏，郁郁葱葱，其中的一株七叶菩提树，树围近3米，高14米，传为唐代所留。</p>
+										<a href="#">详情</a>
+									</div>
+								</li>
+								<li>
+									<div class="scenic_img"></div>
+									<a class="des">
+										千年银杏
+									</a>
+									<div class="scenic_info">
+										<p>千年银杏树(又名白果树、公孙树)，树高45.7米，胸围9.4米，八人才能合抱，当地有"七楼八拐棍"之称。它占地亩余，是中国五大银杏树之一。至今已有两千多年历史，为我国现存最大的银杏树，是神奇的不老不死之树。</p>
+										<a href="#">详情</a>
+									</div>
+								</li>
+								<li>
+									<div class="scenic_img"></div>
+									<a class="des">
+										香岩湖
+									</a>
+									<div class="scenic_info">
+										<p>与沁河景区相连的交通水利涵洞，在山顶上修建了人造瀑布，湖内可容水约120万立方米湖岸整齐垒起，岸上搞生态绿化，再利用旧村废弃的土窑洞，通过整修装饰，与现有的猕猴自然保护区融为一体，建成一个山水相融、人猴嬉戏的景点。</p>
+										<a href="#">详情</a>
+									</div>
+								</li>
+								<li>
+									<div class="scenic_img"></div>
+									<a class="des">
+										猕猴公园
+									</a>
+									<div class="scenic_info">
+										<p>以野生猕猴观赏为主题的“猕猴王国”，在这里生活着16群3800余只太行猕猴，太行猕猴属于灵长目猴科，为国家二级保护动物，它们各个双眼皮，大眼睛，形体俊美，善于攀援、模仿性强，是地球纬度最北的猕猴群落，在我们的想像中，猕猴一般生长在南方，</p>
+										<a href="#">详情</a>
+									</div>
+								</li>
+							</ul>
+						  </div>
+						  <!--<div class="col-sm-6 col-md-3">
 						    <div class="thumbnail">
 						      <img src="http://pic3.40017.cn/scenery/destination/2015/04/18/15/JINPSX.jpg.webp" alt="...">
 						      <div class="caption">
@@ -116,42 +198,18 @@
 						        <p><a href="#" class="btn btn-primary" role="button">立即购买</a> <a href="#" class="btn btn-default" role="button">查看详情</a></p>
 						      </div>
 						    </div>
-						  </div>
-						  <div class="col-sm-6 col-md-3">
-						    <div class="thumbnail">
-						      <img src="http://pic3.40017.cn/scenery/destination/2015/04/18/15/JINPSX.jpg.webp" alt="...">
-						      <div class="caption">
-						        <h4>王屋山景区门票<h4>
-						        <p><span>¥</span>99.00</p>
-						        <p><a href="#" class="btn btn-primary" role="button">立即购买</a> <a href="#" class="btn btn-default" role="button">查看详情</a></p>
-						      </div>
-						    </div>
-						  </div>
-						  <div class="col-sm-6 col-md-3">
-						    <div class="thumbnail">
-						      <img src="http://pic3.40017.cn/scenery/destination/2015/04/18/15/JINPSX.jpg.webp" alt="...">
-						      <div class="caption">
-						        <h4>王屋山景区门票</h4>
-						        <p><span>¥</span>99.00</p>
-						        <p><a href="#" class="btn btn-primary" role="button">立即购买</a> <a href="#" class="btn btn-default" role="button">查看详情</a></p>
-						      </div>
-						    </div>
-						  </div>
-						  <div class="col-sm-6 col-md-3">
-						    <div class="thumbnail">
-						      <img src="http://pic3.40017.cn/scenery/destination/2015/04/18/15/JINPSX.jpg.webp" alt="...">
-						      <div class="caption">
-						        <h4>王屋山景区门票<h4>
-						        <p><span>¥</span>99.00</p>
-						        <p><a href="#" class="btn btn-primary" role="button">立即购买</a> <a href="#" class="btn btn-default" role="button">查看详情</a></p>
-						      </div>
-						    </div>
-						  </div>
-						</div>
+						  </div>						-->
 					</div>
 				</div>
-				<div class="t_tickets well">
-					<h3><span class="change_food food_active">餐饮</span><span class="change_food">住宿</span><a href="#">More</a></h3>
+				<!---->
+				<div class="t_tickets t_tickets_hotel">
+					<div class="title_icon"></div>
+					<div class="title_line">
+						<div class="title_info">
+							<a href=""></a><a href=""></a>
+						</div>
+						<div class="more"></div>
+					</div>
 					<div class="ol_order">
 						<div class="accommodation row">
 							 <a class="col-xs-6 col-md-3" href="#" class="thumbnail">
@@ -243,13 +301,17 @@
 							    </a>	
 						</div>
 					</div>
+					<div class="border_bottom"></div>
 				</div>
-				<div class="t_tickets well">
+				<!--车票预订-->
+				<div class="t_tickets">
 					<h3>车票预订<a>More</a></h3>
 					<div class="ol_order">
 					</div>
+					<div class="border_bottom"></div>
 				</div>
-				<div class="t_tickets well">
+				<!--线路查询-->
+				<div class="t_tickets">
 					<h3>线路查询<a href="#">More</a></h3>
 					<div class="ol_order">
 						<div class="t_route row">
@@ -309,37 +371,48 @@
 							</li>
 						</div>			
 					</div>
+					<div class="border_bottom"></div>
 				</div>
 			</div>
 		</section>
 		<footer id="footer">
-			<h3>
-				<strong>友情链接：</strong>
-				<a href="">链接</a>
-				<a href="">链接</a>
-			</h3>
-			<div class="footer_con">
-				<div class="footer_con_left">
-					<p>
-						<span>王屋山风景名胜区</span>
-						<span>票务咨询: 0396-4779888</span>
-						<span>维权投诉: 0396-4779338</span>
-						<span>传真: 0396-4779318</span>
-					</p>
-					<p>
-						<span>河南省驻马店市遂平县嵖岈山风景区</span>
-						<span>Copyright© 2014.  豫ICP备14009938号-1</span>
-						<span>技术支持——连横科技</span>
-					</p>
+			<div class="footer_box">
+				<h3>
+					<strong>友情链接：</strong>
+					<a href="">五龙口风景区</a>
+					<a href="">那些年小镇</a>
+				</h3>
+				<div class="footer_con">
+					<div class="footer_con_left">
+						<p>
+							<span>王屋山风景名胜区</span></br>
+							<span>电话：0391-6733058 0391-6733358</span>
+							<span>豫ICP备08005859号-1</span>
+						</p>
+						<p>
+							<span>版权所有: 河南省济源市王屋山风景名胜区管理局 </span></br>
+							<span>Copyright2011-2015　www.wwsjq.com online services. All rights reserved.</span></br>
+							<span>技术支持——连横科技</span>
+						</p>
+					</div>
+					<div class="footer_con_right">
+						<img src="images/code.png" />
+					</div>
 				</div>
-				<div class="footer_con_right">
-					<img src="http://www.chayashan.com/images/icon_4a.gif" />
-				</div>
+			</div>			
+			<!--底部背景-->
+			<div class="t_bg">			
 			</div>
-		</footer>
-		<div id="t_bg">
 			
-		</div>
+		</footer>
+		<!--背景-->
+		<div id="t_bg_top"></div>
+		<!--日期-->
+		<script>
+			$(function(){
+				$(".getCalendar").datepicker({});
+			})
+		</script>
 		<script> 
 		var mySwiper = new Swiper('.swiper-container', {
 			autoplay: 2000,//可选选项，自动滑动

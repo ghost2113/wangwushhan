@@ -1,4 +1,20 @@
 @charset "utf-8";
+@font-face {
+  font-family: 'iconfont';  /* project id 186524 */
+  src: url('//at.alicdn.com/t/font_2ormzs1igu0ltyb9.eot');
+  src: url('//at.alicdn.com/t/font_2ormzs1igu0ltyb9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2ormzs1igu0ltyb9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2ormzs1igu0ltyb9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2ormzs1igu0ltyb9.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+
 //居中
 $center:0 auto;
 //字体样式
@@ -49,10 +65,11 @@ body,html{
     height:2rem; 
     margin:0 auto;  
     .logo{
-        @include position(absolute,0.4rem,null,null,0.4rem);
-        width:1rem;
-        height:1rem;
-        background:url(../images/logo.gif) no-repeat center center;
+        @include position(absolute,0.7rem,null,null,0.4rem);
+        width:0.6rem;
+        height:0.9rem;
+        background:url(../images/logo3.png) no-repeat center center;
+        background-size:100% 100%;
     }
     .header_nav1{
         width:100%;
@@ -146,7 +163,7 @@ body,html{
     border-top:5px solid #8c8c8c;
     border-radius:0 0 0.1rem 0.1rem;
     color:white;
-    background:#1bba9e url(../images/nav_bg.png) no-repeat right bottom;
+    background:rgba(0,0,0,.7) url(../images/nav_bg.png) no-repeat right bottom;
 }
 #header .header_nav2 li:hover a{
     color:white;
@@ -165,18 +182,26 @@ body,html{
         height:auto !important;
         min-height:6rem;
         margin:0 auto;
+        background:rgba(255,255,255,.3);
+        padding: 19px;
+        /* border: 1px solid #e3e3e3; */
+        border-radius: 4px;
         .t_tickets{
+            position:relative;
             width:100%;
             height:3rem;
             height:auto !important;
             min-height:3rem;
+            padding:20px;
+            background:white;       
+            border-radius:4px;     
             h3{ 
                 width:100%;
                 height:0.25rem;           
                 font-size: 0.18rem;
                 line-height:0.25rem;
                 color: #af370a;
-                border-bottom: 1px #000 solid;
+                //border-bottom: 1px #000 solid;
                 overflow: hidden;
                 margin:0;     
                 span{
@@ -203,17 +228,209 @@ body,html{
               
             }
             .ol_order{
+//              ::after{
+//              width:100%;
+//              height:1px;
+//              border-bottom:1px dashed #c2c2c2;
+//              padding:0 20px;
+//          }
                 width:100%;
-                height:2rem;
+                height:2.4rem;
                 height:auto !important;
-                min-height:2rem;
-                padding-top:0.1rem;
+                min-height:2.4rem;
+                padding:0.1rem 0;
+                
                 //票务
-                .btn-primary{
-                    background:#1bba9e;
+                .ol_order_left{
                     border:0;
+                    .thumbnail{
+                        width:100%;
+                        height:100%;
+                        overflow: hidden;
+                        border:0;
+                        .change_scenic{
+                            float:left;
+                            width:20%;
+                            height:2.4rem;
+                            height:auto !important;
+                            min-height:2.4rem;
+                            li{
+                                width:100%;
+                                height:1.2rem;
+                                height:auto !important;
+                                min-height:1.2rem;
+                                vertical-align: middle;
+                                writing-mode: tb-rl;
+                                line-height:0.4rem;
+                                @include font(0.16rem,null,null,#696969,center);
+                            }
+                            .change_scenic_active{
+                                border-left:5px solid #10cec0;
+                            }
+                        }
+                        .t_online_ticket{
+                            float:left;
+                            margin-left:2%;
+                            width:78%;
+                            height:100%;
+                            padding:5% 0 5% 2.5%;
+                            @include font(0.14rem,null,null,#696969,null);
+                            h5{
+                                width:100%;
+                                margin:0.1rem auto 0.1rem;
+                            }
+                            li{
+                                width:100%;
+                                height:0.24rem; 
+                                list-style:none;       
+                                span{
+                                    float:left;
+                                    display:block;
+                                    width:20%;
+                                    height:100%;
+                                    @include font(0.24rem,null,0.24rem,null,center);
+                                    border-left:0;
+                                    cursor:pointer;
+                                }
+                                input{
+                                    float:left;
+                                    display:block;
+                                    width:80%;
+                                    height:100%;
+                                    margin:0;
+                                    font-size:0.12rem;
+                                    text-indent:1em;
+                                    color:white;
+                                    border: 1px solid #ccc;
+                                    box-sizing:border-box;
+                                    background:none;
+                                    outline:none;
+                                }
+                                //下拉菜单
+                                .form-control{
+                                    width:100%;
+                                    height:100%;
+                                    margin:0;
+                                    padding:0;
+                                    font-size:0.12rem;
+                                    text-indent:1em;
+                                    background:none;
+                                    border: 1px solid #ccc;
+                                    border-radius: 0;
+                                    outline:none;
+                                    option{
+                                        text-indent:1em;
+                                        text-align: center;   
+                                        height:0.14rem;                         
+                                    }
+                                }
+        
+                            }
+                            li:nth-of-type(3){
+                                border-bottom:1px solid #ccc;
+                            }
+                            .t_order{
+                                margin-top:0.6rem;
+                                input{
+                                    height:0.24rem;
+                                    float:right;
+                                    width:40%;
+                                    color:#fff;
+                                    text-indent: 0;
+                                    border-radius: 0.12rem;
+                                    background:#10cec0;
+                                    border:0;
+                                }
+                            }
+                        }    
+                    }
                 }
-                //餐饮住宿
+                //预订右边手风琴效果
+                .ol_order_right{
+                    height:2.5rem;
+                    height:auto !important;
+                    min-height:2.5rem;
+                    padding:0;
+                    li:nth-child(2){
+                        .scenic_img{
+                            background:url(http://www.wwsjq.com/UploadSour/pic/05/22082117946.jpg) center; 
+                        }
+                    }
+                                        li:nth-child(3){
+                        .scenic_img{
+                            background:url(http://www.wwsjq.com/UploadSour/pic/04/09115209314.jpg) center; 
+                        }
+                    }
+                                        li:nth-child(4){
+                        .scenic_img{
+                            background:url(http://zhongguohoushan.com/uploads/allimg/150802/1-150P209261X44.jpg) center; 
+                        }
+                    }
+                                        li:nth-child(5){
+                        .scenic_img{
+                            background:url(http://zhongguohoushan.com/uploads/allimg/150802/1-150P20Z0280-L.jpg) center; 
+                        }
+                    }
+                    
+                    li{
+                        position:relative;
+                        float:left;
+                        width:20%;
+                        height:2.5rem;
+                        height:auto !important;
+                        min-height:2.5rem;
+                        .scenic_img{
+                            width:100%;
+                            height:2.5rem;
+                            background:url(http://www.wwsjq.com/UploadSour/pic/04/21101440470.jpg) center;                           
+                        }
+                       // 图片标题
+                        .des{
+                            display:block;
+                            position:absolute;
+                            left:0;
+                            top:0;
+                            width:0.3rem;
+                            height:1.2rem;
+                            background:rgba(0,0,0,.3); 
+                            writing-mode: tb-rl;                        
+                            @include font(0.14rem,null,0.3rem,white,center);
+                        }
+                        //图片详情
+                        .scenic_info{
+                            display:none;
+                            position:absolute;
+                            bottom:0;
+                            left:0;
+                            width:100%;
+                            height:1.2rem;
+                            padding:0.1rem 0.2rem 0; 
+                            background:rgba(0,0,0,.4);
+                            p{
+                                width:100%;
+                                height:0.6rem;                                
+                                @include font(0.12rem,null,0.2rem,white,null);
+                                text-indent:2em;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                            }
+                            a{
+                                display:block;
+                                float:right;
+                                width:0.4rem;
+                                height:0.24rem;
+                                background:#1BBA9E;
+                                border-radius: 4px;
+                                text-decoration: none;
+                                 @include font(0.12rem,null,0.24rem,white,center);
+                            }
+                        }
+                    }
+                }
+                //酒店餐饮
                 .accommodation{
                     width:100%;
                     height:2rem;
@@ -284,7 +501,9 @@ body,html{
                             line-height: 0.2rem;
                         }
                     }
+                    
                 }
+                
                 //餐饮美食
                 .food{
                     display:none;
@@ -406,68 +625,94 @@ body,html{
                     }
                 }
             }
+            .border_bottom{
+                position:absolute;
+                left:0;  
+                right:0;
+                bottom:0;
+                width:96%;
+                height:2px;
+                margin:0 auto;
+                border-bottom:1px dashed #c2c2c2;
+            }
         }
     }
 }
 #footer{
-    width:9.8rem;
+    width:100%;
     height:1.7rem;
-    margin:$center;
-    h3{
-        width:100%;
-        height:0.3rem;
-        margin-bottom: 0.2rem;
-        box-sizing: border-box;
-        padding-bottom: 0.1rem;
-        font-size:0.14rem;
-        border-bottom: 1px #7d7159 solid;
-        strong,a{
+    //background:rgba(0,0,0,.7);
+    font-family: arial,\5b8b\4f53;
+    .footer_box{
+        width:9.8rem;
+        height:1.7rem;
+        margin:$center; 
+        font-family: "微软雅黑";
+        //color:#c2c2c2;  
+        color:#7d7159;    
+        h3{
+            width:100%;
+            height:0.3rem;
+            margin-bottom: 0.2rem;
+            box-sizing: border-box;
+            padding-bottom: 0.1rem;
+            font-size:0.14rem;
+            border-bottom: 1px #7d7159 solid;
+            strong,a{
                 display:block;
                 float: left;
                 margin-right: 0.06rem;
+                margin-top:0.05rem;
                 line-height: 0.2rem;
-                color: #7d7159;
+                font-weight:400;
+                //color:#c3c3c3;
+                color:#7d7159;
+            }
+            a{
+                color:#7d7159;
+            }
+        }
+        .footer_con{
+           width:100%;
+           height:1.2rem; 
+           .footer_con_left{
+               float:left;
+               width:4.8rem;
+               height:1.2rem;
+               p{
+                    float: left;
+                    width: 100%;
+                    font-size:12px;
+                    line-height: 0.2rem;
+                    overflow: hidden;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    text-align: justify;
+               }
+           }
+           .footer_con_right{
+               float:left;
+               width:4.3rem;
+               height:0.8rem;
+               margin-left:0.7rem;
+               img{
+                   display:block;
+                    width:100%;
+                    height:100%;
+               }
+           }
         }
     }
-    .footer_con{
-       width:100%;
-       height:1.2rem; 
-       .footer_con_left{
-           float:left;
-           width:4.8rem;
-           height:1.2rem;
-           p{
-                float: left;
-                width: 100%;
-                line-height: 0.24rem;
-                color: #7d7159;
-                overflow: hidden;
-                word-wrap: break-word;
-                word-break: break-all;
-                text-align: justify;
-           }
-       }
-       .footer_con_right{
-           float:left;
-           width:4.3rem;
-           height:0.8rem;
-           margin-left:0.7rem;
-           img{
-               display:block;
-                width:100%;
-                height:100%;
-           }
-       }
-    }
+   
 }
-#t_bg{
+
+#t_bg_top{
     z-index: -1111;
-    @include position(fixed,null,null,0,0);
+    @include position(absolute,0,null,null,0);
     width:100%;
-    height:4rem;
-    background:url(../img/absolute_footer.jpg);
-    background-size: cover;
-    -webkit-background-size:cover ;
+    height:6rem;
+    background: -webkit-linear-gradient(top, #10cec0 0%,#f5f2eb 50%,#f5f2eb 100%) no-repeat;
+    background-size:100% 100%;
 }
 @media screen and (max-width: 980px) {
     #banner{

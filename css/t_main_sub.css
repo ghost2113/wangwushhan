@@ -26,7 +26,7 @@ body, html {
   height: 100%;
   font-family: "Microsoft YaHei",SimSun,sans-serif;
   z-index: -1000;
-  background: url(../images/bg.jpg) #f5f2eb top center no-repeat; }
+  background: #f5f2eb; }
 
 #header {
   position: relative;
@@ -35,11 +35,12 @@ body, html {
   margin: 0 auto; }
 #header .logo {
   position: absolute;
-  top: 0.4rem;
+  top: 0.7rem;
   left: 0.4rem;
-  width: 1rem;
-  height: 1rem;
-  background: url(../images/logo.gif) no-repeat center center; }
+  width: 0.6rem;
+  height: 0.9rem;
+  background: url(../images/logo3.png) no-repeat center center;
+  background-size: 100% 100%; }
 #header .header_nav1 {
   width: 100%;
   height: 0.35rem;
@@ -131,7 +132,7 @@ body, html {
   border-top: 5px solid #8c8c8c;
   border-radius: 0 0 0.1rem 0.1rem;
   color: white;
-  background: #1bba9e url(../images/nav_bg.png) no-repeat right bottom; }
+  background: rgba(0, 0, 0, 0.7) url(../images/nav_bg.png) no-repeat right bottom; }
 
 #header .header_nav2 li:hover a {
   color: white; }
@@ -190,14 +191,14 @@ body, html {
   z-index: 1000;
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 5%;
   width: 60%;
   height: 0.3rem;
   font-family: "楷体";
   font-size: 0.2rem;
   font-weight: 600;
   line-height: 0.3rem;
-  color: #3c3c3c;
+  color: #af370a;
   text-align: center; }
 #main .main_right {
   height: 2.4rem;
@@ -213,16 +214,20 @@ body, html {
 #main .main_right .t_sub_process span:nth-last-child(1) {
   color: #af370a; }
 #main .main_right .t_sub_con {
+  position: relative;
   width: 100%;
   height: 2.4rem;
   height: auto !important;
   min-height: 2.4rem; }
 #main .main_right .t_sub_con .t_sub_conlist {
+  position: relative;
   display: none;
   width: 100%;
   height: 2.4rem;
   height: auto !important;
-  min-height: 2.4rem; }
+  min-height: 2.4rem;
+  padding-bottom: 2rem;
+  line-height: 2; }
 #main .main_right .t_sub_con .t-sub_jqjs h3 {
   text-align: center; }
 #main .main_right .t_sub_con .t-sub_jqjs p {
@@ -242,7 +247,29 @@ body, html {
 #main .main_right .t_sub_con .t-sub_jqjs .t_jqjs_conlist img {
   display: block;
   margin: 0.2rem auto; }
+#main .main_right .t_sub_con .t-sub_jqwh h3 {
+  text-align: center; }
+#main .main_right .t_sub_con .t-sub_jqwh p {
+  text-align: center; }
+#main .main_right .t_sub_con .t-sub_jqwh p span {
+  display: inline-block;
+  margin-right: 0.1rem;
+  font-size: 0.12rem;
+  color: #696969;
+  text-align: center; }
+#main .main_right .t_sub_con .t-sub_jqwh .t_jqjs_conlist {
+  padding: 0.2rem; }
+#main .main_right .t_sub_con .t-sub_jqwh .t_jqjs_conlist p {
+  text-align: left;
+  margin: 0.3rem 0;
+  text-indent: 2em; }
+#main .main_right .t_sub_con .t-sub_jqwh .t_jqjs_conlist img {
+  display: block;
+  margin: 0.2rem auto; }
 #main .main_right .t_jqjs_attractionslist {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -281,10 +308,14 @@ body, html {
   cursor: pointer; }
 
 #footer {
+  position: relative;
+  width: 100%;
+  height: 1.7rem; }
+#footer .footer_con {
   width: 9.8rem;
   height: 1.7rem;
   margin: 0 auto; }
-#footer h3 {
+#footer .footer_con h3 {
   width: 100%;
   height: 0.3rem;
   margin-bottom: 0.2rem;
@@ -292,20 +323,20 @@ body, html {
   padding-bottom: 0.1rem;
   font-size: 0.14rem;
   border-bottom: 1px #7d7159 solid; }
-#footer h3 strong, #footer h3 a {
+#footer .footer_con h3 strong, #footer .footer_con h3 a {
   display: block;
   float: left;
   margin-right: 0.06rem;
   line-height: 0.2rem;
   color: #7d7159; }
-#footer .footer_con {
+#footer .footer_con .footer_con {
   width: 100%;
   height: 1.2rem; }
-#footer .footer_con .footer_con_left {
+#footer .footer_con .footer_con .footer_con_left {
   float: left;
   width: 4.8rem;
   height: 1.2rem; }
-#footer .footer_con .footer_con_left p {
+#footer .footer_con .footer_con .footer_con_left p {
   float: left;
   width: 100%;
   line-height: 0.24rem;
@@ -314,19 +345,18 @@ body, html {
   word-wrap: break-word;
   word-break: break-all;
   text-align: justify; }
-#footer .footer_con .footer_con_right {
+#footer .footer_con .footer_con .footer_con_right {
   float: left;
   width: 4.3rem;
   height: 0.8rem;
   margin-left: 0.7rem; }
-#footer .footer_con .footer_con_right img {
+#footer .footer_con .footer_con .footer_con_right img {
   display: block;
   width: 100%;
   height: 100%; }
-
-#t_bg {
+#footer .t_bg {
   z-index: -1111;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -334,6 +364,16 @@ body, html {
   background: url(../img/absolute_footer.jpg);
   background-size: cover;
   -webkit-background-size: cover; }
+
+#t_bg_top {
+  z-index: -1111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  background: -webkit-linear-gradient(top, #10cec0 0%, #f5f2eb 50%, #f5f2eb 100%) no-repeat;
+  background-size: 100% 100%; }
 
 @media screen and (max-width: 980px) {
   #banner {

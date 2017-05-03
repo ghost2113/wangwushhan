@@ -1,4 +1,17 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'iconfont';
+  /* project id 186524 */
+  src: url("//at.alicdn.com/t/font_2ormzs1igu0ltyb9.eot");
+  src: url("//at.alicdn.com/t/font_2ormzs1igu0ltyb9.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_2ormzs1igu0ltyb9.woff") format("woff"), url("//at.alicdn.com/t/font_2ormzs1igu0ltyb9.ttf") format("truetype"), url("//at.alicdn.com/t/font_2ormzs1igu0ltyb9.svg#iconfont") format("svg"); }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
 ::selection {
   background: #1bba9e;
   color: #fff; }
@@ -22,11 +35,12 @@ body, html {
   margin: 0 auto; }
 #header .logo {
   position: absolute;
-  top: 0.4rem;
+  top: 0.7rem;
   left: 0.4rem;
-  width: 1rem;
-  height: 1rem;
-  background: url(../images/logo.gif) no-repeat center center; }
+  width: 0.6rem;
+  height: 0.9rem;
+  background: url(../images/logo3.png) no-repeat center center;
+  background-size: 100% 100%; }
 #header .header_nav1 {
   width: 100%;
   height: 0.35rem;
@@ -118,7 +132,7 @@ body, html {
   border-top: 5px solid #8c8c8c;
   border-radius: 0 0 0.1rem 0.1rem;
   color: white;
-  background: #1bba9e url(../images/nav_bg.png) no-repeat right bottom; }
+  background: rgba(0, 0, 0, 0.7) url(../images/nav_bg.png) no-repeat right bottom; }
 
 #header .header_nav2 li:hover a {
   color: white; }
@@ -135,19 +149,26 @@ body, html {
   height: 6rem;
   height: auto !important;
   min-height: 6rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 19px;
+  /* border: 1px solid #e3e3e3; */
+  border-radius: 4px; }
 #main .main_con .t_tickets {
+  position: relative;
   width: 100%;
   height: 3rem;
   height: auto !important;
-  min-height: 3rem; }
+  min-height: 3rem;
+  padding: 20px;
+  background: white;
+  border-radius: 4px; }
 #main .main_con .t_tickets h3 {
   width: 100%;
   height: 0.25rem;
   font-size: 0.18rem;
   line-height: 0.25rem;
   color: #af370a;
-  border-bottom: 1px #000 solid;
   overflow: hidden;
   margin: 0; }
 #main .main_con .t_tickets h3 span {
@@ -174,13 +195,172 @@ body, html {
   text-decoration: none; }
 #main .main_con .t_tickets .ol_order {
   width: 100%;
-  height: 2rem;
+  height: 2.4rem;
   height: auto !important;
-  min-height: 2rem;
-  padding-top: 0.1rem; }
-#main .main_con .t_tickets .ol_order .btn-primary {
-  background: #1bba9e;
+  min-height: 2.4rem;
+  padding: 0.1rem 0; }
+#main .main_con .t_tickets .ol_order .ol_order_left {
   border: 0; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 0; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .change_scenic {
+  float: left;
+  width: 20%;
+  height: 2.4rem;
+  height: auto !important;
+  min-height: 2.4rem; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .change_scenic li {
+  width: 100%;
+  height: 1.2rem;
+  height: auto !important;
+  min-height: 1.2rem;
+  vertical-align: middle;
+  writing-mode: tb-rl;
+  line-height: 0.4rem;
+  font-size: 0.16rem;
+  color: #696969;
+  text-align: center; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .change_scenic .change_scenic_active {
+  border-left: 5px solid #10cec0; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .t_online_ticket {
+  float: left;
+  margin-left: 2%;
+  width: 78%;
+  height: 100%;
+  padding: 5% 0 5% 2.5%;
+  font-size: 0.14rem;
+  color: #696969; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .t_online_ticket h5 {
+  width: 100%;
+  margin: 0.1rem auto 0.1rem; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .t_online_ticket li {
+  width: 100%;
+  height: 0.24rem;
+  list-style: none; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .t_online_ticket li span {
+  float: left;
+  display: block;
+  width: 20%;
+  height: 100%;
+  font-size: 0.24rem;
+  line-height: 0.24rem;
+  text-align: center;
+  border-left: 0;
+  cursor: pointer; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .t_online_ticket li input {
+  float: left;
+  display: block;
+  width: 80%;
+  height: 100%;
+  margin: 0;
+  font-size: 0.12rem;
+  text-indent: 1em;
+  color: white;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background: none;
+  outline: none; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .t_online_ticket li .form-control {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 0.12rem;
+  text-indent: 1em;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  outline: none; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .t_online_ticket li .form-control option {
+  text-indent: 1em;
+  text-align: center;
+  height: 0.14rem; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .t_online_ticket li:nth-of-type(3) {
+  border-bottom: 1px solid #ccc; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .t_online_ticket .t_order {
+  margin-top: 0.6rem; }
+#main .main_con .t_tickets .ol_order .ol_order_left .thumbnail .t_online_ticket .t_order input {
+  height: 0.24rem;
+  float: right;
+  width: 40%;
+  color: #fff;
+  text-indent: 0;
+  border-radius: 0.12rem;
+  background: #10cec0;
+  border: 0; }
+#main .main_con .t_tickets .ol_order .ol_order_right {
+  height: 2.5rem;
+  height: auto !important;
+  min-height: 2.5rem;
+  padding: 0; }
+#main .main_con .t_tickets .ol_order .ol_order_right li:nth-child(2) .scenic_img {
+  background: url(http://www.wwsjq.com/UploadSour/pic/05/22082117946.jpg) center; }
+#main .main_con .t_tickets .ol_order .ol_order_right li:nth-child(3) .scenic_img {
+  background: url(http://www.wwsjq.com/UploadSour/pic/04/09115209314.jpg) center; }
+#main .main_con .t_tickets .ol_order .ol_order_right li:nth-child(4) .scenic_img {
+  background: url(http://zhongguohoushan.com/uploads/allimg/150802/1-150P209261X44.jpg) center; }
+#main .main_con .t_tickets .ol_order .ol_order_right li:nth-child(5) .scenic_img {
+  background: url(http://zhongguohoushan.com/uploads/allimg/150802/1-150P20Z0280-L.jpg) center; }
+#main .main_con .t_tickets .ol_order .ol_order_right li {
+  position: relative;
+  float: left;
+  width: 20%;
+  height: 2.5rem;
+  height: auto !important;
+  min-height: 2.5rem; }
+#main .main_con .t_tickets .ol_order .ol_order_right li .scenic_img {
+  width: 100%;
+  height: 2.5rem;
+  background: url(http://www.wwsjq.com/UploadSour/pic/04/21101440470.jpg) center; }
+#main .main_con .t_tickets .ol_order .ol_order_right li .des {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.3rem;
+  height: 1.2rem;
+  background: rgba(0, 0, 0, 0.3);
+  writing-mode: tb-rl;
+  font-size: 0.14rem;
+  line-height: 0.3rem;
+  color: white;
+  text-align: center; }
+#main .main_con .t_tickets .ol_order .ol_order_right li .scenic_info {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.2rem;
+  padding: 0.1rem 0.2rem 0;
+  background: rgba(0, 0, 0, 0.4); }
+#main .main_con .t_tickets .ol_order .ol_order_right li .scenic_info p {
+  width: 100%;
+  height: 0.6rem;
+  font-size: 0.12rem;
+  line-height: 0.2rem;
+  color: white;
+  text-indent: 2em;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden; }
+#main .main_con .t_tickets .ol_order .ol_order_right li .scenic_info a {
+  display: block;
+  float: right;
+  width: 0.4rem;
+  height: 0.24rem;
+  background: #1BBA9E;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.12rem;
+  line-height: 0.24rem;
+  color: white;
+  text-align: center; }
 #main .main_con .t_tickets .ol_order .accommodation {
   width: 100%;
   height: 2rem;
@@ -355,12 +535,27 @@ body, html {
   color: #696969; }
 #main .main_con .t_tickets .ol_order .t_route .t_route_info:nth-child(2n+1) {
   padding-right: 0.2rem; }
+#main .main_con .t_tickets .border_bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 96%;
+  height: 2px;
+  margin: 0 auto;
+  border-bottom: 1px dashed #c2c2c2; }
 
 #footer {
+  width: 100%;
+  height: 1.7rem;
+  font-family: arial,\5b8b\4f53; }
+#footer .footer_box {
   width: 9.8rem;
   height: 1.7rem;
-  margin: 0 auto; }
-#footer h3 {
+  margin: 0 auto;
+  font-family: "微软雅黑";
+  color: #7d7159; }
+#footer .footer_box h3 {
   width: 100%;
   height: 0.3rem;
   margin-bottom: 0.2rem;
@@ -368,48 +563,51 @@ body, html {
   padding-bottom: 0.1rem;
   font-size: 0.14rem;
   border-bottom: 1px #7d7159 solid; }
-#footer h3 strong, #footer h3 a {
+#footer .footer_box h3 strong, #footer .footer_box h3 a {
   display: block;
   float: left;
   margin-right: 0.06rem;
+  margin-top: 0.05rem;
   line-height: 0.2rem;
+  font-weight: 400;
   color: #7d7159; }
-#footer .footer_con {
+#footer .footer_box h3 a {
+  color: #7d7159; }
+#footer .footer_box .footer_con {
   width: 100%;
   height: 1.2rem; }
-#footer .footer_con .footer_con_left {
+#footer .footer_box .footer_con .footer_con_left {
   float: left;
   width: 4.8rem;
   height: 1.2rem; }
-#footer .footer_con .footer_con_left p {
+#footer .footer_box .footer_con .footer_con_left p {
   float: left;
   width: 100%;
-  line-height: 0.24rem;
-  color: #7d7159;
+  font-size: 12px;
+  line-height: 0.2rem;
   overflow: hidden;
   word-wrap: break-word;
   word-break: break-all;
   text-align: justify; }
-#footer .footer_con .footer_con_right {
+#footer .footer_box .footer_con .footer_con_right {
   float: left;
   width: 4.3rem;
   height: 0.8rem;
   margin-left: 0.7rem; }
-#footer .footer_con .footer_con_right img {
+#footer .footer_box .footer_con .footer_con_right img {
   display: block;
   width: 100%;
   height: 100%; }
 
-#t_bg {
+#t_bg_top {
   z-index: -1111;
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 4rem;
-  background: url(../img/absolute_footer.jpg);
-  background-size: cover;
-  -webkit-background-size: cover; }
+  height: 6rem;
+  background: -webkit-linear-gradient(top, #10cec0 0%, #f5f2eb 50%, #f5f2eb 100%) no-repeat;
+  background-size: 100% 100%; }
 
 @media screen and (max-width: 980px) {
   #banner {
