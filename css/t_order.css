@@ -2,8 +2,8 @@
 @font-face {
   font-family: 'iconfont';
   /* project id 186524 */
-  src: url("//at.alicdn.com/t/font_2ormzs1igu0ltyb9.eot");
-  src: url("//at.alicdn.com/t/font_2ormzs1igu0ltyb9.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_2ormzs1igu0ltyb9.woff") format("woff"), url("//at.alicdn.com/t/font_2ormzs1igu0ltyb9.ttf") format("truetype"), url("//at.alicdn.com/t/font_2ormzs1igu0ltyb9.svg#iconfont") format("svg"); }
+  src: url("//at.alicdn.com/t/font_rzkac8r3czb8olxr.eot");
+  src: url("//at.alicdn.com/t/font_rzkac8r3czb8olxr.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_rzkac8r3czb8olxr.woff") format("woff"), url("//at.alicdn.com/t/font_rzkac8r3czb8olxr.ttf") format("truetype"), url("//at.alicdn.com/t/font_rzkac8r3czb8olxr.svg#iconfont") format("svg"); }
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
@@ -163,36 +163,64 @@ body, html {
   padding: 20px;
   background: white;
   border-radius: 4px; }
-#main .main_con .t_tickets h3 {
+#main .main_con .t_tickets .title_icon {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0 auto;
+  background: url(../images/title-icon.png); }
+#main .main_con .t_tickets .title_icon_food {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0 auto;
+  background: url(../images/title-icon.png) 0 -0.63rem; }
+#main .main_con .t_tickets .title_icon_route {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0 auto;
+  background: url(../images/title-icon.png) 0 -1.89rem; }
+#main .main_con .t_tickets .title_line {
+  position: relative;
   width: 100%;
-  height: 0.25rem;
-  font-size: 0.18rem;
-  line-height: 0.25rem;
-  color: #af370a;
-  overflow: hidden;
-  margin: 0; }
-#main .main_con .t_tickets h3 span {
+  height: 0.2rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.2rem; }
+#main .main_con .t_tickets .title_line .title_info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.15rem;
+  width: 1.2rem;
+  height: 0.3rem;
+  background: white;
+  margin: 0 auto;
+  text-align: center; }
+#main .main_con .t_tickets .title_line .title_info a {
   display: inline-block;
-  margin-left: 0.05rem;
+  width: 1.2rem;
   height: 100%;
-  padding: 0 0.2rem;
-  margin-bottom: -2px; }
-#main .main_con .t_tickets h3 .food_active {
-  box-sizing: border-box;
-  border: 1px solid #1bba9e;
-  border-radius: 0.05rem 0.05rem 0 0;
-  background: #1bba9e;
-  color: white; }
-#main .main_con .t_tickets h3 a {
-  display: inline-block;
+  font-size: 0.24rem;
+  line-height: 0.3rem;
+  color: #10cec0;
+  text-align: center; }
+#main .main_con .t_tickets .title_line .more {
   float: right;
-  margin-right: 0.1rem;
-  font-size: 0.14rem;
+  width: 0.8rem;
+  height: 100%;
+  padding: 0 0.1rem;
+  font-size: 0.16rem;
+  line-height: 0.16rem;
+  text-align: center; }
+#main .main_con .t_tickets .title_line .more a {
+  color: #333;
+  margin-bottom: 0.05rem; }
+#main .main_con .t_tickets .title_line .more a span {
+  margin: 0 0.05rem;
+  with: 0.16rem;
+  height: 0.16rem;
+  font-size: 0.12rem;
   font-weight: 600;
-  line-height: 0.25rem;
-  color: #af370a;
-  text-align: center;
-  text-decoration: none; }
+  line-height: 0.16rem;
+  text-align: center; }
 #main .main_con .t_tickets .ol_order {
   width: 100%;
   height: 2.4rem;
@@ -295,7 +323,8 @@ body, html {
   height: 2.5rem;
   height: auto !important;
   min-height: 2.5rem;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 #main .main_con .t_tickets .ol_order .ol_order_right li:nth-child(2) .scenic_img {
   background: url(http://www.wwsjq.com/UploadSour/pic/05/22082117946.jpg) center; }
 #main .main_con .t_tickets .ol_order .ol_order_right li:nth-child(3) .scenic_img {
@@ -363,135 +392,175 @@ body, html {
   text-align: center; }
 #main .main_con .t_tickets .ol_order .accommodation {
   width: 100%;
-  height: 2rem;
+  height: 3rem;
   height: auto !important;
-  min-height: 2rem;
-  margin: 0; }
-#main .main_con .t_tickets .ol_order .accommodation a {
-  position: relative;
-  display: block;
-  height: 2rem;
+  min-height: 3rem;
+  margin: 0;
+  padding: 0; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box {
+  height: 3rem;
   padding: 0;
+  margin: 0; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_list {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_list li {
+  position: relative;
+  width: 100%;
+  height: 0.6rem;
+  padding-left: 0.6rem;
+  border: 1px solid #696969;
+  border-right: none;
+  border-bottom: none;
+  box-sizing: border-box;
+  color: #333; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_list li em {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.6rem;
+  height: 0.6rem;
+  font-size: 0.4rem;
+  line-height: 0.6rem;
+  text-align: center; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_list li h5 {
+  padding: 0.05rem 0 0 0.1rem;
+  margin: 0;
+  font-size: 0.16rem;
+  line-height: 0.16rem;
+  text-align: left;
+  white-space: nowrap;
   overflow: hidden;
-  word-wrap: break-word;
-  word-break: break-all;
-  font-family: "宋体";
-  text-decoration: none;
-  font-size: 0.12rem;
-  line-height: 0.5rem;
+  text-overflow: ellipsis; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_list li p {
+  font-size: 0.14rem;
+  line-height: 0.16rem;
+  text-align: left;
+  padding: 0.15rem 0 0 0.1rem;
+  margin: 0; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_list li p span {
+  font-size: 0.16rem;
+  font-weight: 600; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_list li:hover {
+  background: #007AFF;
   color: white; }
-#main .main_con .t_tickets .ol_order .accommodation a img {
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_list li:nth-child(5) {
+  border-bottom: 1px solid #333; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_img {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_img li {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_img li img {
   display: block;
   width: 100%;
   height: 100%; }
-#main .main_con .t_tickets .ol_order .accommodation a .accommodation_title {
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_img li .img_info {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 0.5rem;
-  padding-left: 0.1rem;
-  background: rgba(0, 0, 0, 0.4); }
-#main .main_con .t_tickets .ol_order .accommodation a .accommodation_title span {
-  display: inline-block; }
-#main .main_con .t_tickets .ol_order .accommodation a .accommodation_title span:nth-child(2) {
-  float: right;
-  font-family: "微软雅黑";
-  color: #af370a;
-  margin-right: 0.1rem;
-  font-size: 0.14rem; }
-#main .main_con .t_tickets .ol_order .accommodation a .accommodation_title span:nth-child(3) {
-  float: right;
-  font-family: "微软雅黑";
-  color: #af370a;
-  margin-right: 0.1rem;
-  font-size: 0.14rem; }
-#main .main_con .t_tickets .ol_order .accommodation .accommodation_con {
-  height: 2rem; }
-#main .main_con .t_tickets .ol_order .accommodation .accommodation_con h5 {
-  font-size: 0.16rem; }
-#main .main_con .t_tickets .ol_order .accommodation .accommodation_con p {
-  text-indent: 2em;
+  height: 30%;
+  padding: 5% 5% 0;
+  background: rgba(0, 0, 0, 0.3); }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_img li .img_info p {
+  width: 100%;
+  height: 0.4rem;
+  padding: 0 5%;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  color: #666; }
-#main .main_con .t_tickets .ol_order .accommodation .accommodation_con a {
-  display: inline-block;
-  float: right;
-  height: 0.2rem;
-  margin-right: 0.1rem;
-  color: #999;
-  line-height: 0.2rem; }
-#main .main_con .t_tickets .ol_order .food {
-  display: none;
-  width: 100%;
-  height: 2rem;
-  height: auto !important;
-  min-height: 2rem;
+  font-size: 0.14rem;
+  line-height: 0.2rem;
+  color: white;
+  text-indent: 2em;
   margin: 0; }
-#main .main_con .t_tickets .ol_order .food a {
+#main .main_con .t_tickets .ol_order .accommodation .hotel_box .hotel_img li .img_info a {
+  float: right;
+  color: #f35a42; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_hot {
+  height: 3rem;
+  padding: 0;
+  margin: 0; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_hot a {
   position: relative;
   display: block;
-  height: 2rem;
-  padding: 0;
-  overflow: hidden;
-  word-wrap: break-word;
-  word-break: break-all;
-  font-family: "宋体";
-  font-size: 0.12rem;
-  line-height: 0.5rem;
-  color: white; }
-#main .main_con .t_tickets .ol_order .food a img {
+  width: 98%;
+  height: 49%;
+  margin-bottom: 2%;
+  margin-left: 2%; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_hot a img {
   display: block;
   width: 100%;
   height: 100%; }
-#main .main_con .t_tickets .ol_order .food a .food_title {
+#main .main_con .t_tickets .ol_order .accommodation .hotel_hot a .img_info2 {
   position: absolute;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
-  height: 0.5rem;
-  padding-left: 0.1rem;
-  background: rgba(0, 0, 0, 0.4); }
-#main .main_con .t_tickets .ol_order .food a .food_title span {
-  display: inline-block; }
-#main .main_con .t_tickets .ol_order .food a .food_title span:nth-child(2) {
-  float: right;
-  font-family: "微软雅黑";
-  color: #af370a;
-  margin-right: 0.1rem;
-  font-size: 0.14rem; }
-#main .main_con .t_tickets .ol_order .food a .food_title span:nth-child(3) {
-  float: right;
-  font-family: "微软雅黑";
-  color: #af370a;
-  margin-right: 0.1rem;
-  font-size: 0.14rem; }
-#main .main_con .t_tickets .ol_order .food a .food_con {
-  position: absolute;
-  top: 100%;
-  bottom: 0;
-  left: 0;
+  height: 30%;
+  color: white;
+  background: rgba(0, 0, 0, 0.3); }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_hot a .img_info2 h5 {
   width: 100%;
   height: 100%;
-  color: #ccc;
-  line-height: 0.2rem;
-  padding: 0.1rem;
-  background: rgba(0, 0, 0, 0.4);
+  padding: 5% 5%;
+  margin: 0; }
+#main .main_con .t_tickets .ol_order .accommodation .hotel_hot a .img_info2 h5 em, #main .main_con .t_tickets .ol_order .accommodation .hotel_hot a .img_info2 h5 span {
+  display: inline-block;
+  float: right; }
+#main .main_con .t_tickets .ol_order .food {
+  width: 100%;
+  height: 2rem;
+  height: auto !important;
+  min-height: 2rem;
+  margin: 0;
+  padding-top: 0.2rem; }
+#main .main_con .t_tickets .ol_order .food .food_box {
+  height: 100%; }
+#main .main_con .t_tickets .ol_order .food .food_box .food_img_list {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 auto 0.2rem;
+  padding: 2.5%;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 0 0.06rem 0.06rem rgba(0, 0, 0, 0.3);
   overflow: hidden; }
-#main .main_con .t_tickets .ol_order .food a .food_con h5 {
-  color: white; }
-#main .main_con .t_tickets .ol_order .food a .food_con p {
-  text-indent: 2em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical; }
-#main .main_con .t_tickets .ol_order .t_route {
+#main .main_con .t_tickets .ol_order .food .food_box .food_img_list img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; }
+#main .main_con .t_tickets .ol_order .food .food_box h5 {
+  width: 100%;
+  height: 0.3rem;
+  margin: 0.1rem 0;
+  font-size: 0.2rem;
+  line-height: 0.3rem;
+  color: #333;
+  text-align: center; }
+#main .main_con .t_tickets .ol_order .food .food_box button {
+  display: block;
+  width: 40%;
+  height: 0.3rem;
+  margin: 0.2rem auto 0.1rem;
+  font-size: 0.14rem;
+  line-height: 0.3rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.1rem;
+  border: 0;
+  background: #10cec0; }
+#main .main_con .t_tickets .ol_order .route {
   width: 100%;
   height: 2rem;
   height: auto !important;
@@ -499,51 +568,78 @@ body, html {
   margin: 0;
   list-style: none;
   overflow: hidden; }
-#main .main_con .t_tickets .ol_order .t_route .t_route_info {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: row;
-  height: 0.9rem;
-  padding: 0.15rem 0; }
-#main .main_con .t_tickets .ol_order .t_route .t_route_info .t_pic {
-  width: 0.6rem;
-  height: 0.6rem;
-  margin-right: 0.1rem; }
-#main .main_con .t_tickets .ol_order .t_route .t_route_info .t_pic img {
+#main .main_con .t_tickets .ol_order .route .route_change {
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  background: url(http://vip.hailuogou.com/style/w/images/index/xl-img1.jpg);
+  background-size: 100% 100%; }
+#main .main_con .t_tickets .ol_order .route .route_change h5 {
+  display: block;
+  width: 80%;
+  height: 0.3rem;
+  margin: 0.2rem auto 0;
+  font-size: 0.2rem;
+  line-height: 0.3rem;
+  color: #fff;
+  text-align: center; }
+#main .main_con .t_tickets .ol_order .route .route_change ul {
+  width: 100%;
+  height: 2rem;
+  height: auto !important;
+  min-height: 2rem; }
+#main .main_con .t_tickets .ol_order .route .route_change ul li {
+  width: 1rem;
+  height: 0.3rem;
+  height: auto !important;
+  min-height: 0.3rem;
+  margin: 0.2rem auto 0;
+  font-size: 0.16rem;
+  font-weight: 500;
+  line-height: 0.3rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.15rem; }
+#main .main_con .t_tickets .ol_order .route .route_change ul li:hover {
+  background: #10cec0; }
+#main .main_con .t_tickets .ol_order .route .route_box {
+  height: 2.7rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.15rem; }
+#main .main_con .t_tickets .ol_order .route .route_box .route_list {
+  float: left;
+  width: 30%;
+  margin-left: 3.333%;
+  height: 100%;
+  box-shadow: 0.02rem 0.02rem 0.05rem rgba(0, 0, 0, 0.5); }
+#main .main_con .t_tickets .ol_order .route .route_box .route_list .route_img {
+  with: 100%;
+  height: 1.6rem; }
+#main .main_con .t_tickets .ol_order .route .route_box .route_list .route_img img {
   display: block;
   width: 100%;
   height: 100%; }
-#main .main_con .t_tickets .ol_order .t_route .t_route_info .t_info {
-  flex: 1;
-  height: 0.6rem; }
-#main .main_con .t_tickets .ol_order .t_route .t_route_info .t_info .t_name {
-  width: 100%;
-  height: 0.2rem; }
-#main .main_con .t_tickets .ol_order .t_route .t_route_info .t_info .t_name span {
-  display: inline-block;
-  float: right;
-  margin-right: 0.05rem;
-  font-size: 0.14rem;
-  line-height: 0.2rem;
-  color: #af370a; }
-#main .main_con .t_tickets .ol_order .t_route .t_route_info .t_info .t_con {
+#main .main_con .t_tickets .ol_order .route .route_box .route_list h5 {
+  padding: 0 5%;
+  font-size: 0.16rem; }
+#main .main_con .t_tickets .ol_order .route .route_box .route_list p {
   width: 100%;
   height: 0.4rem;
-  text-indent: 2em;
+  padding: 0 5%;
   font-size: 0.14rem;
-  line-height: 0.18rem;
-  color: #696969; }
-#main .main_con .t_tickets .ol_order .t_route .t_route_info:nth-child(2n+1) {
-  padding-right: 0.2rem; }
-#main .main_con .t_tickets .border_bottom {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 96%;
-  height: 2px;
-  margin: 0 auto;
-  border-bottom: 1px dashed #c2c2c2; }
+  line-height: 0.2rem;
+  color: #666;
+  text-indent: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
+#main .main_con .t_tickets .ol_order .route .route_box .route_list a {
+  float: right;
+  margin-right: 5%;
+  color: #10cec0; }
 
 #footer {
   width: 100%;

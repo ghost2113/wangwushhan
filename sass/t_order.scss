@@ -1,11 +1,11 @@
 @charset "utf-8";
 @font-face {
   font-family: 'iconfont';  /* project id 186524 */
-  src: url('//at.alicdn.com/t/font_2ormzs1igu0ltyb9.eot');
-  src: url('//at.alicdn.com/t/font_2ormzs1igu0ltyb9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2ormzs1igu0ltyb9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2ormzs1igu0ltyb9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2ormzs1igu0ltyb9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_rzkac8r3czb8olxr.eot');
+  src: url('//at.alicdn.com/t/font_rzkac8r3czb8olxr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_rzkac8r3czb8olxr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_rzkac8r3czb8olxr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_rzkac8r3czb8olxr.svg#iconfont') format('svg');
 }
 .iconfont{
     font-family:"iconfont" !important;
@@ -15,6 +15,8 @@
     -moz-osx-font-smoothing: grayscale;}
 
 
+//主题颜色
+$color:#10cec0;
 //居中
 $center:0 auto;
 //字体样式
@@ -194,53 +196,76 @@ body,html{
             min-height:3rem;
             padding:20px;
             background:white;       
-            border-radius:4px;     
-            h3{ 
+            border-radius:4px;    
+            .title_icon{
+                width:0.6rem;
+                height:0.6rem;
+                margin:0 auto;
+                background:url(../images/title-icon.png);
+            }
+            .title_icon_food{
+                width:0.6rem;
+                height:0.6rem;
+                margin:0 auto;
+                background:url(../images/title-icon.png) 0 -0.63rem;
+            }
+            .title_icon_route{
+                width:0.6rem;
+                height:0.6rem;
+                margin:0 auto;
+                background:url(../images/title-icon.png) 0 -1.89rem;
+            }
+            .title_line{
+                position:relative;
                 width:100%;
-                height:0.25rem;           
-                font-size: 0.18rem;
-                line-height:0.25rem;
-                color: #af370a;
-                //border-bottom: 1px #000 solid;
-                overflow: hidden;
-                margin:0;     
-                span{
-                    display:inline-block;
-                    margin-left:0.05rem;
-                    height:100%;
-                    padding:0 0.2rem;
-                    margin-bottom:-2px;              
-                }      
-                .food_active{
-                    box-sizing: border-box;
-                    border:1px solid #1bba9e;
-                    border-radius: 0.05rem 0.05rem 0 0;
-                    background:#1bba9e; 
-                    color:white;  
-                } 
-                a{
-                    display:inline-block;
-                    float:right;
-                    margin-right:0.1rem;
-                    @include font(0.14rem,600,0.25rem,#af370a,center);
-                    text-decoration: none;
+                height:0.2rem;
+                border-bottom:1px solid #ccc;
+                margin-bottom:0.2rem;
+                .title_info{
+                    position:absolute;
+                    left:0;
+                    right:0;
+                    bottom:-0.15rem;
+                    width:1.2rem;
+//                  width:auto !important;
+//                  min-width:1.2rem;
+                    height:0.3rem;
+                    background:white;
+                    margin:0 auto;
+                    text-align:center;
+                    a{
+                        display:inline-block;
+                        width:1.2rem;
+                        height:100%;
+                        @include font(0.24rem,null,0.3rem,$color,center);
+                    }
                 }
-              
+                .more{
+                    float:right;
+                    width:0.8rem;
+                    height:100%;
+                    padding:0 0.1rem;
+                    @include font(0.16rem,null,0.16rem,null,center);
+                    a{
+                        color:#333;
+                        margin-bottom:0.05rem;
+                        span{   
+                            margin:0 0.05rem;  
+                            with:0.16rem;
+                            height:0.16rem;       
+                            @include font(0.12rem,600,0.16rem,null,center);
+                        }
+                    }
+
+                }
             }
             .ol_order{
-//              ::after{
-//              width:100%;
-//              height:1px;
-//              border-bottom:1px dashed #c2c2c2;
-//              padding:0 20px;
-//          }
                 width:100%;
                 height:2.4rem;
                 height:auto !important;
                 min-height:2.4rem;
-                padding:0.1rem 0;
-                
-                //票务
+                padding:0.1rem 0;                
+//----------------------------------- 票务预订   -----------------------------------------// 
                 .ol_order_left{
                     border:0;
                     .thumbnail{
@@ -265,7 +290,7 @@ body,html{
                                 @include font(0.16rem,null,null,#696969,center);
                             }
                             .change_scenic_active{
-                                border-left:5px solid #10cec0;
+                                border-left:5px solid $color;
                             }
                         }
                         .t_online_ticket{
@@ -338,7 +363,7 @@ body,html{
                                     color:#fff;
                                     text-indent: 0;
                                     border-radius: 0.12rem;
-                                    background:#10cec0;
+                                    background:$color;
                                     border:0;
                                 }
                             }
@@ -351,6 +376,7 @@ body,html{
                     height:auto !important;
                     min-height:2.5rem;
                     padding:0;
+                    margin:0;
                     li:nth-child(2){
                         .scenic_img{
                             background:url(http://www.wwsjq.com/UploadSour/pic/05/22082117946.jpg) center; 
@@ -430,152 +456,195 @@ body,html{
                         }
                     }
                 }
-                //酒店餐饮
+//----------------------------------- 酒店住宿   -----------------------------------------//           
                 .accommodation{
+                    width:100%;
+                    height:3rem;
+                    height:auto !important;
+                    min-height:3rem;
+                    margin:0;
+                    padding:0;
+                    .hotel_box{
+                        height:3rem;                        
+                        padding:0;
+                        margin:0;
+                        .hotel_list{
+                            height:100%;
+                            margin:0;
+                            padding:0;
+                            li{
+                                position:relative;
+                                width:100%;
+                                height:0.6rem;
+                                padding-left:0.6rem;
+                                border:1px solid #696969;
+                                border-right:none;
+                                border-bottom:none;
+                                box-sizing:border-box;
+                                color:#333;
+                                em{
+                                    display:block;
+                                    position:absolute;
+                                    left:0;
+                                    top:0;
+                                    width:0.6rem;
+                                    height:0.6rem;
+                                    @include font(0.4rem,null,0.6rem,null,center);
+                                }
+                                h5{
+                                    padding:0.05rem 0 0 0.1rem;
+                                    margin:0;
+                                     @include font(0.16rem,null,0.16rem,null,left);
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                                p{
+                                    @include font(0.14rem,null,0.16rem,null,left);
+                                    padding:0.15rem 0 0 0.1rem;
+                                    margin:0;
+                                    span{
+                                        font-size:0.16rem;
+                                        font-weight:600;
+                                    }
+                                }
+                            }
+                            li:hover{
+                                background:#007AFF;
+                                color:white;
+                            }
+                            li:nth-child(5){
+                                border-bottom:1px solid #333;
+                            }
+                        }
+                        .hotel_img{
+                            height:100%;
+                            margin:0;
+                            padding:0;
+                            li{
+                                position:relative;
+                                width:100%;
+                                height:100%;
+                                img{
+                                    display:block;
+                                    width:100%;
+                                    height:100%;
+                                }
+                                .img_info{
+                                    position:absolute;
+                                    bottom:0;
+                                    left:0;
+                                    width:100%;
+                                    height:30%;
+                                    padding:5% 5% 0;
+                                    background:rgba(0,0,0,.3);
+                                    p{
+                                        width:100%;
+                                        height:0.4rem;
+                                        padding:0 5%;
+                                        @include ellipsis(2);
+                                        @include font(0.14rem,null,0.2rem,white,null);
+                                        text-indent:2em;
+                                        margin:0;
+                                    }
+                                    a{
+                                        float:right;
+                                        color:#f35a42;
+                                    }
+                                   
+                                }
+                                
+                            }
+                        }
+                    }
+                    .hotel_hot{
+                        height:3rem;
+                        padding:0;
+                        margin:0;
+                        a{
+                            position:relative;
+                            display:block;
+                            width:98%;
+                            height:49%;
+                            margin-bottom:2%;
+                            margin-left:2%;
+                            img{
+                                display:block;
+                                width:100%;
+                                height:100%;
+                            }
+                            .img_info2{
+                                position:absolute;
+                                left:0;
+                                bottom:0;
+                                width:100%;
+                                height:30%;
+                                color:white;
+                                background:rgba(0,0,0,.3);
+                                h5{
+                                    width:100%;
+                                    height:100%;
+                                    padding:5% 5%;
+                                    margin:0;
+                                    em,span{
+                                        display:inline-block;
+                                        float:right;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                
+//----------------------------------- 餐饮美食   -----------------------------------------// 
+                .food{
                     width:100%;
                     height:2rem;
                     height:auto !important;
                     min-height:2rem;
                     margin:0;
-                    a{  
-                        position:relative;
-                        display:block;
-                        height:2rem;
-                        padding:0;
-                        overflow: hidden;
-                        word-wrap: break-word;
-                        word-break: break-all;
-                        font-family: "宋体";
-                        text-decoration: none;
-                        @include font(0.12rem,null,0.5rem,white,null);
-                        img{
+                    padding-top:0.2rem;
+                    .food_box{
+                        height:100%;
+                        .food_img_list{
                             display:block;
-                            width:100%;
-                            height:100%;
-                        }
-                        .accommodation_title{
-                            @include position(absolute,null,null,0,0);
-                            width:100%;
-                            height:0.5rem;
-                            padding-left:0.1rem;
-                            background:rgba(0,0,0,0.4);
-                            span{                                
-                                display:inline-block;                               
-                            }
-                            span:nth-child(2){
-                                float:right;
-                                font-family: "微软雅黑";
-                                color:#af370a;
-                                margin-right:0.1rem;
-                                font-size:0.14rem;
-                            }
-                            span:nth-child(3){
-                                float:right;
-                                font-family: "微软雅黑";
-                                color:#af370a;
-                                margin-right:0.1rem;
-                                font-size:0.14rem;
+                            width:1.5rem;
+                            height:1.5rem;
+                            margin:0 auto 0.2rem;
+                            padding:2.5%;
+                            border-radius: 1rem;
+                            background:white;
+                            box-shadow:0 0 0.06rem 0.06rem rgba(0,0,0,.3);
+                            overflow:hidden;
+                            img{
+                                display:block;
+                                width:100%;
+                                height:100%;
+                                border-radius: 50%;
                             }
                         }
-                    }   
-                    .accommodation_con{
-                        height:2rem;
                         h5{
-                           font-size:0.16rem;
-                        };
-                        p{
-                            text-indent:2em;
-                            overflow : hidden;
-                            text-overflow: ellipsis;
-                            display: -webkit-box;
-                            -webkit-line-clamp: 6;
-                            -webkit-box-orient: vertical;
-                            color:#666;
+                            width:100%;
+                            height:0.3rem;
+                            margin:0.1rem 0;
+                            @include font(0.20rem,null,0.3rem,#333,center);                                
                         }
-                        a{
-                            display:inline-block;
-                            float:right;
-                            height:0.2rem;
-                            margin-right:0.1rem;
-                            color:#999;
-                            line-height: 0.2rem;
+                        button{
+                            display:block;
+                            width:40%;
+                            height:0.3rem;
+                            margin:0.2rem auto 0.1rem;
+                            @include font(0.14rem,null,0.3rem,#fff,center);
+                            border-radius: 0.1rem;
+                            border:0;
+                            background:$color;
                         }
                     }
                     
                 }
-                
-                //餐饮美食
-                .food{
-                    display:none;
-                    width:100%;
-                    height:2rem;
-                    height:auto !important;
-                    min-height:2rem;
-                    margin:0;
-                    a{  
-                        position:relative;
-                        display:block;
-                        height:2rem;
-                        padding:0;
-                        overflow: hidden;
-                        word-wrap: break-word;
-                        word-break: break-all;
-                        font-family: "宋体";
-                        @include font(0.12rem,null,0.5rem,white,null);
-                        img{
-                            display:block;
-                            width:100%;
-                            height:100%;
-                        }
-                        .food_title{
-                            @include position(absolute,null,null,0,0);
-                            width:100%;
-                            height:0.5rem;
-                            padding-left:0.1rem;
-                            background:rgba(0,0,0,0.4);
-                            span{                                
-                                display:inline-block;                               
-                            }
-                            span:nth-child(2){
-                                float:right;
-                                font-family: "微软雅黑";
-                                color:#af370a;
-                                margin-right:0.1rem;
-                                font-size:0.14rem;
-                            }
-                            span:nth-child(3){
-                                float:right;
-                                font-family: "微软雅黑";
-                                color:#af370a;
-                                margin-right:0.1rem;
-                                font-size:0.14rem;
-                            }
-                        }
-                        .food_con{
-                            @include position(absolute,100%,null,0,0);
-                            width:100%;
-                            height:100%;
-                            color:#ccc;
-                            line-height:0.2rem;
-                            padding:0.1rem;
-                            background:rgba(0,0,0,0.4);
-                            overflow:hidden;
-                            h5{
-                                color:white;
-                            };
-                            p{
-                                text-indent:2em;
-                                overflow : hidden;
-                                text-overflow: ellipsis;
-                                display: -webkit-box;
-                                -webkit-line-clamp: 6;
-                                -webkit-box-orient: vertical;
-                            }
-                        }
-                    }
-                }
-                //路线查询
-                .t_route{
+//----------------------------------- 线路查询   -----------------------------------------// 
+                .route{
                     width:100%;
                     height:2rem;
                     height:auto !important;
@@ -583,57 +652,80 @@ body,html{
                     margin:0;
                     list-style: none;
                     overflow: hidden;
-                    .t_route_info{       
-                        display:flex;
-                        display:-webkit-flex;     
-                        flex-direction:row;            
-                        height:0.9rem;
-                        padding:0.15rem 0;
-                        .t_pic{
-                            width:0.6rem;
-                            height:0.6rem;
-                            margin-right:0.1rem;
-                            img{
-                                display:block;
-                                width:100%;
-                                height:100%;                                
+                    //选项卡
+                    .route_change{
+                        height:3rem;
+                        margin:0;
+                        padding:0;
+                        background:url(http://vip.hailuogou.com/style/w/images/index/xl-img1.jpg);
+                        background-size:100% 100%;
+                        h5{
+                            display:block;
+                            width:80%;
+                            height:0.3rem;
+                            margin:0.2rem auto 0;
+                            @include font(0.2rem,null,0.3rem,#fff,center);
+                        }
+                        ul{
+                            width:100%;
+                            height:2rem;
+                            height:auto !important;
+                            min-height:2rem;
+                            li{
+                                width:1rem;
+                                height:0.3rem;
+                                height:auto !important;
+                                min-height:0.3rem;
+                                margin:0.2rem auto 0;                                
+                                @include font(0.16rem,500,0.3rem,#fff,center);
+                                border-radius:0.15rem;
                             }
-                        }   
-                        .t_info{
-                            flex:1;
-                            height:0.6rem;
-                            .t_name{
-                                width:100%;
-                                height:0.2rem;
-                                span{
-                                    display:inline-block;
-                                    float:right;
-                                    margin-right:0.05rem;
-                                     @include font(0.14rem,null,0.2rem,#af370a,null);
-                                }
+                            li:hover{
+                                background:$color;
                             }
-                            .t_con{
-                                width:100%;
-                                height:0.4rem;
-                                text-indent:2em;
-                                @include font(0.14rem,null,0.18rem,#696969,null);
-                            }
-                        }                
+                        }
                     }
-                    .t_route_info:nth-child(2n+1){
-                        padding-right:0.2rem;
-                    }
+                    //推荐线路景点介绍
+                   .route_box{
+                       height:2.7rem;
+                       padding:0;
+                       margin:0;
+                       margin-top:0.15rem;
+                       .route_list{
+                           float:left;
+                           width:30%;
+                           margin-left:3.333%;
+                           height:100%;
+                           box-shadow:0.02rem 0.02rem 0.05rem  rgba(0,0,0,0.5);
+                           .route_img{
+                               with:100%;
+                               height:1.6rem;
+                               img{
+                                   display:block;
+                                   width:100%;
+                                   height:100%;
+                               }
+                           }
+                           h5{
+                               padding:0 5%;
+                               font-size:0.16rem;
+                           }
+                           p{
+                              width:100%;
+                              height:0.4rem;
+                              padding:0 5%;
+                              @include font(0.14rem,null,0.2rem,#666,null);
+                              text-indent:2em;
+                              @include ellipsis(2);
+                           }
+                           a{
+                               float:right;
+                               margin-right:5%;
+                               color:$color;
+                           }
+                       }
+                   }
                 }
-            }
-            .border_bottom{
-                position:absolute;
-                left:0;  
-                right:0;
-                bottom:0;
-                width:96%;
-                height:2px;
-                margin:0 auto;
-                border-bottom:1px dashed #c2c2c2;
             }
         }
     }
@@ -711,7 +803,7 @@ body,html{
     @include position(absolute,0,null,null,0);
     width:100%;
     height:6rem;
-    background: -webkit-linear-gradient(top, #10cec0 0%,#f5f2eb 50%,#f5f2eb 100%) no-repeat;
+    background: -webkit-linear-gradient(top, $color 0%,#f5f2eb 50%,#f5f2eb 100%) no-repeat;
     background-size:100% 100%;
 }
 @media screen and (max-width: 980px) {
