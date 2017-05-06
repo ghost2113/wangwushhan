@@ -36,37 +36,20 @@ $(function(){
     	})
 		$(".header_nav2 li").eq($(this).index()).siblings().children("a").css({"color":"#3c3c3c"});
 	})
-	//在线预订
-	//餐饮住宿选项卡
-	$(".change_food").click(function(){
-		//console.log($(this).index())
-		$(this).addClass("food_active").siblings().removeClass("food_active");
-		if($(this).index()==0){
-			$(".accommodation").css("display","block");
-			$(".food").css("display","none");
-		}else{
-			$(".accommodation").css("display","none");
-			$(".food").css("display","block");
-		}
-	})
-		//餐饮介绍效果
-	$(".food>a").mouseenter(function(){
-//		console.log($(".food_title"))
-//		console.log($(".food_con"))
-		$(".food_title").eq($(this).index()).stop().animate({"top":"100%"},1000)
-		$(".food_con").eq($(this).index()).stop().animate({"top":"0"},1000)
-		$(".food>a").mouseleave(function(){
-			$(".food_title").eq($(this).index()).stop().animate({"bottom":"0"},1000)
-			$(".food_con").eq($(this).index()).stop().animate({"top":"100%"},1000)
-		})
+	/************************************************在线预订页面*********************************************/
+	/**
+	 * 票务  景区预订切换
+	 */
+	$(".change_scenic li").on("click",function(){
+		$(this).addClass("change_scenic_active").siblings().removeClass("change_scenic_active");
 	})
 	//手风琴效果实现
-/*	$(".ol_order_right li").on("mouseenter",function(){
-		//console.log($(this).css("width"))
-		var index = $(this).index();
-		$(this).stop("true","true").animate({"width":"40%"},500).siblings().stop("true","true").animate({"width":"20%"},500);
-	})
-	*/
+	/*	$(".ol_order_right li").on("mouseenter",function(){
+			//console.log($(this).css("width"))
+			var index = $(this).index();
+			$(this).stop("true","true").animate({"width":"40%"},500).siblings().stop("true","true").animate({"width":"20%"},500);
+		})
+		*/
 	/***************************************
 					hover事件的使用:$(selector).hover(fn1, fn2);
 					鼠标进入，执行函数fn1
@@ -84,9 +67,18 @@ $(function(){
 					$(this).find(".des").css("display","block");
 					$(this).find(".scenic_info").css("display","none");
 				});
-	
+	/*
+	 * 酒店住宿
+	 * */
+	$(".hotel_list li").on("click",function(){
+		var index = $(this).index();
+		$(this).addClass("hotel_list_active").siblings().removeClass("hotel_list_active");
+		$(".hotel_img li").eq(index).css("display","block").siblings().css("display","none");
+	})
+	$(".hotel_list li:eq(0)").trigger("click");
+	/*********************************************二级详情页面 ***************************************************************/
 	/**
-	 * 	二级页面 选项卡效果实现
+	 * 选项卡效果实现
 	 */
 	$(".t_nav_list li").click(function(){
 		console.log($(this).index())
@@ -108,9 +100,6 @@ $(function(){
 	/**
 	 * 景区介绍轮播图
 	 */
-	console.log( $(".t_attractionsbox_position li:eq(0)").outerWidth())
-	console.log( $(".t_attractionsbox_position li").length)
-	console.log( $(".t_attractionsbox_position").css("left"))
 	function shuffling(direction){
 		//由参数判断轮播图滑动方向，+右 -左
 		console.log(1)

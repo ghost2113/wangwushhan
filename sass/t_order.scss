@@ -1,4 +1,5 @@
 @charset "utf-8";
+//iconfont 图标引入
 @font-face {
   font-family: 'iconfont';  /* project id 186524 */
   src: url('//at.alicdn.com/t/font_rzkac8r3czb8olxr.eot');
@@ -13,8 +14,18 @@
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;}
-
-
+//动画   transition transform
+@mixin transition($property,$duration,$timeing_function,$delay){
+    -moz-transition: $property $duration $timeing_function,$delay; 
+    -webkit-transition: $property $duration $timeing_function,$delay; 
+    -o-transition: $property $duration $timeing_function,$delay; 
+    transition:$property $duration $timeing_function,$delay;
+}
+@mixin transform($property){
+    transform:$property;
+    -ms-transform:$property; /* IE 9 */
+    -webkit-transform:$property; /* Safari and Chrome */
+}
 //主题颜色
 $color:#10cec0;
 //居中
@@ -172,7 +183,7 @@ body,html{
 }
 //内容区域
 #main{
-    width:9.8rem;
+    width:12rem;
     height:6rem;
     height:auto !important;
     min-height:6rem;
@@ -201,19 +212,27 @@ body,html{
                 width:0.6rem;
                 height:0.6rem;
                 margin:0 auto;
-                background:url(../images/title-icon.png);
+                background-image:url(../images/hotel.png);
+                background-size:100% 100%;
+                background-repeat:no-repeat;
+            }
+            .title_icon_ticket{
+                width:0.6rem;
+                height:0.6rem;
+                margin:0 auto;
+                background-image:url(../images/ticket.png);
             }
             .title_icon_food{
                 width:0.6rem;
                 height:0.6rem;
                 margin:0 auto;
-                background:url(../images/title-icon.png) 0 -0.63rem;
+                background-image:url(../images/food.png);
             }
             .title_icon_route{
                 width:0.6rem;
                 height:0.6rem;
                 margin:0 auto;
-                background:url(../images/title-icon.png) 0 -1.89rem;
+                background-image:url(../images/route.png);
             }
             .title_line{
                 position:relative;
@@ -264,10 +283,13 @@ body,html{
                 height:2.4rem;
                 height:auto !important;
                 min-height:2.4rem;
-                padding:0.1rem 0;                
+                padding:0.1rem 0;   
+                margin:0;             
 //----------------------------------- 票务预订   -----------------------------------------// 
                 .ol_order_left{
                     border:0;
+                    margin:0;
+                    padding:0;
                     .thumbnail{
                         width:100%;
                         height:100%;
@@ -275,30 +297,33 @@ body,html{
                         border:0;
                         .change_scenic{
                             float:left;
-                            width:20%;
-                            height:2.4rem;
+                            width:100%;
+                            height:0.5rem;
                             height:auto !important;
-                            min-height:2.4rem;
+                            min-height:0.5rem;                            
                             li{
-                                width:100%;
-                                height:1.2rem;
-                                height:auto !important;
-                                min-height:1.2rem;
+                                float:left;
+                                width:50%;
+                                height:100%;
                                 vertical-align: middle;
-                                writing-mode: tb-rl;
+                                //writing-mode: tb-rl;
                                 line-height:0.4rem;
+                                border-top:5px solid #ccc;
+                                box-sizing: border-box;
                                 @include font(0.16rem,null,null,#696969,center);
                             }
                             .change_scenic_active{
-                                border-left:5px solid $color;
+                                border-top:5px solid #ccc;
+                                color:white;
+                                background:$color;
                             }
                         }
                         .t_online_ticket{
                             float:left;
                             margin-left:2%;
-                            width:78%;
-                            height:100%;
-                            padding:5% 0 5% 2.5%;
+                            width:100%;
+                            height:2.5rem;
+                            padding:5% 5% 5% 5%;                            
                             @include font(0.14rem,null,null,#696969,null);
                             h5{
                                 width:100%;
@@ -352,10 +377,10 @@ body,html{
         
                             }
                             li:nth-of-type(3){
-                                border-bottom:1px solid #ccc;
+//                              border-bottom:1px solid #ccc;
                             }
                             .t_order{
-                                margin-top:0.6rem;
+                                margin-top:0.4rem;
                                 input{
                                     height:0.24rem;
                                     float:right;
@@ -370,90 +395,45 @@ body,html{
                         }    
                     }
                 }
-                //预订右边手风琴效果
+                //预订右边景点展示
                 .ol_order_right{
-                    height:2.5rem;
+                    height:3rem;
                     height:auto !important;
-                    min-height:2.5rem;
+                    min-height:3rem;
                     padding:0;
-                    margin:0;
-                    li:nth-child(2){
-                        .scenic_img{
-                            background:url(http://www.wwsjq.com/UploadSour/pic/05/22082117946.jpg) center; 
-                        }
-                    }
-                                        li:nth-child(3){
-                        .scenic_img{
-                            background:url(http://www.wwsjq.com/UploadSour/pic/04/09115209314.jpg) center; 
-                        }
-                    }
-                                        li:nth-child(4){
-                        .scenic_img{
-                            background:url(http://zhongguohoushan.com/uploads/allimg/150802/1-150P209261X44.jpg) center; 
-                        }
-                    }
-                                        li:nth-child(5){
-                        .scenic_img{
-                            background:url(http://zhongguohoushan.com/uploads/allimg/150802/1-150P20Z0280-L.jpg) center; 
-                        }
-                    }
-                    
-                    li{
+                    margin:0;              
+                    .scenic_img{
                         position:relative;
-                        float:left;
-                        width:20%;
-                        height:2.5rem;
-                        height:auto !important;
-                        min-height:2.5rem;
-                        .scenic_img{
-                            width:100%;
-                            height:2.5rem;
-                            background:url(http://www.wwsjq.com/UploadSour/pic/04/21101440470.jpg) center;                           
-                        }
-                       // 图片标题
-                        .des{
+                        height:1.45rem;
+                        margin:0;
+                        padding:0;
+                        img{
                             display:block;
+                            width:100%;
+                            height:100%;
+                        }
+                        .scenic_info{
                             position:absolute;
                             left:0;
                             top:0;
-                            width:0.3rem;
-                            height:1.2rem;
-                            background:rgba(0,0,0,.3); 
-                            writing-mode: tb-rl;                        
-                            @include font(0.14rem,null,0.3rem,white,center);
-                        }
-                        //图片详情
-                        .scenic_info{
-                            display:none;
-                            position:absolute;
+                            right:0;
                             bottom:0;
-                            left:0;
-                            width:100%;
-                            height:1.2rem;
-                            padding:0.1rem 0.2rem 0; 
+                            margin:auto;
+                            width:1rem;
+                            height:1rem;
+                            border-radius:0.5rem;
                             background:rgba(0,0,0,.4);
-                            p{
-                                width:100%;
-                                height:0.6rem;                                
-                                @include font(0.12rem,null,0.2rem,white,null);
-                                text-indent:2em;
-                                text-overflow: ellipsis;
-                                display: -webkit-box;
-                                -webkit-line-clamp: 3;
-                                -webkit-box-orient: vertical;
-                                overflow: hidden;
-                            }
-                            a{
-                                display:block;
-                                float:right;
-                                width:0.4rem;
-                                height:0.24rem;
-                                background:#1BBA9E;
-                                border-radius: 4px;
-                                text-decoration: none;
-                                 @include font(0.12rem,null,0.24rem,white,center);
-                            }
+                            @include font(0.14rem,null,0.2rem,white,center);
                         }
+                    }
+                    .scenic_img:nth-child(1),.scenic_img:nth-child(2){
+                       margin-bottom:0.05rem;                       
+                    }
+                    .scenic_img:nth-child(2n){
+                        padding-left:0.025rem;
+                    }
+                    .scenic_img:nth-child(2n+1){
+                        padding-right:0.025rem;
                     }
                 }
 //----------------------------------- 酒店住宿   -----------------------------------------//           
@@ -509,7 +489,7 @@ body,html{
                                     }
                                 }
                             }
-                            li:hover{
+                            .hotel_list_active{
                                 background:#007AFF;
                                 color:white;
                             }
@@ -525,10 +505,15 @@ body,html{
                                 position:relative;
                                 width:100%;
                                 height:100%;
+                                overflow:hidden;
                                 img{
                                     display:block;
                                     width:100%;
                                     height:100%;
+                                    transition:all 0.8s;
+                                }
+                                img:hover{
+                                    transform: scale(1.2,1.2);
                                 }
                                 .img_info{
                                     position:absolute;
@@ -568,10 +553,19 @@ body,html{
                             height:49%;
                             margin-bottom:2%;
                             margin-left:2%;
+                            overflow: hidden;
                             img{
                                 display:block;
                                 width:100%;
                                 height:100%;
+                                -moz-transition:all 0.8s;
+                                -webkit-transition: all 0.8s;
+                                transition:all 0.8s;
+                            }
+                            img:hover{
+                                -moz-transform:scale(1.2,1.2) ;
+                                -webkit-transform:scale(1.2,1.2) ;
+                                transform:scale(1.2,1.2);
                             }
                             .img_info2{
                                 position:absolute;
@@ -697,6 +691,7 @@ body,html{
                            margin-left:3.333%;
                            height:100%;
                            box-shadow:0.02rem 0.02rem 0.05rem  rgba(0,0,0,0.5);
+                           @include transition(all,0.3s,ease-in-out,null);
                            .route_img{
                                with:100%;
                                height:1.6rem;
@@ -724,6 +719,10 @@ body,html{
                                color:$color;
                            }
                        }
+                       .route_list:hover{
+                           @include transform(scale(1.05,1.05));
+                           box-shadow:none;
+                       }
                    }
                 }
             }
@@ -736,10 +735,11 @@ body,html{
     //background:rgba(0,0,0,.7);
     font-family: arial,\5b8b\4f53;
     .footer_box{
-        width:9.8rem;
+        width:12rem;
         height:1.7rem;
         margin:$center; 
         font-family: "微软雅黑";
+        padding:0 0.3rem;
         //color:#c2c2c2;  
         color:#7d7159;    
         h3{
@@ -783,7 +783,7 @@ body,html{
                }
            }
            .footer_con_right{
-               float:left;
+               float:right;
                width:4.3rem;
                height:0.8rem;
                margin-left:0.7rem;
