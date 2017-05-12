@@ -289,15 +289,13 @@ body,html{
                     img{
                         display:block;
                         margin:0.2rem auto;                        
-                    }
-                    
+                    }                    
                 }
             }
             //景区文化
             .t-sub_jqwh{
                 h3{
                     text-align: center;
-
                 };
                 p{
                     text-align:center;
@@ -321,6 +319,58 @@ body,html{
                     
                 }
             }
+            //旅游视频
+            .video_box{
+                width:80%;
+                height:6rem;
+                margin:0 auto;
+                padding:10% 0 15%;
+                .video{
+                    width:100%;
+                    height:100%;
+                    margin:0 auto;
+                    background:black;
+                }
+            }
+            //周边景区
+            .t_sub_conlistbox{
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content:space-around;
+                width:100%;
+                height:4rem;
+                height:auto !important;
+                min-height:4rem;
+                padding:5%;
+                .t_scenicbox{
+                    display:block;
+                    width:1.6rem;
+                    height:1.6rem;
+                    margin:0;
+                    padding:0;
+                    margin-bottom:0.5rem;
+                    border-radius:0.8rem;
+                    overflow: hidden;
+                    .t_scenic_list{
+                        width:100%;
+                        height:100%;
+                        img{
+                            display:block;
+                            width:100%;
+                            height:1.2rem;
+                        }
+                        h5{
+                            width:100%;
+                            height:0.4rem;
+                            margin:0;
+                            padding:0;
+                            @include font(0.16,null,0.4rem,white,center);
+                            background:#10cec0;
+                        }
+                    }
+                }
+            }
         }
 //      景点轮播
         .t_jqjs_attractionslist{
@@ -334,6 +384,7 @@ body,html{
             -ms-flex-direction: row;
             width:100%;
             height:2rem;
+            overflow:hidden;
             .t_attractionsbox{  
                 position:relative;            
                 flex:1;                

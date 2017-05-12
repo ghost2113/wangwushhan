@@ -404,13 +404,23 @@ body,html{
                     margin:0;              
                     .scenic_img{
                         position:relative;
-                        height:1.45rem;
+                        height:1.475rem;
                         margin:0;
                         padding:0;
+                        overflow: hidden;
+                        
                         img{
                             display:block;
                             width:100%;
                             height:100%;
+                            -moz-transition:all 0.8s;
+                            -webkit-transition: all 0.8s;
+                            transition:all 0.8s;
+                        }
+                        img:hover{
+                            -moz-transform:scale(1.1,1.1) ;
+                            -webkit-transform:scale(1.1,1.1) ;
+                            transform:scale(1.1,1.1);
                         }
                         .scenic_info{
                             position:absolute;
@@ -423,7 +433,32 @@ body,html{
                             height:1rem;
                             border-radius:0.5rem;
                             background:rgba(0,0,0,.4);
-                            @include font(0.14rem,null,0.2rem,white,center);
+                            @include font(0.12rem,null,0.2rem,white,center);
+                            cursor:pointer;
+                            h5{
+                                width:80%;
+                                height:0.24rem;
+                                min-height:0.24rem;
+                                height:auto !important;
+                                margin:0.3rem auto 0;
+                                font: 700 0.18rem/1.2 "Microsoft yahei";
+                                border-bottom:1px solid rgba(255, 255, 255, 0.5);
+                            }
+                            p>a{
+                                @include font(0.16rem,null,0.2rem,#f60,center);
+                                font: 0.22rem/1.5 tahoma;
+                                color: #f60;
+                                dfn{
+                                    vertical-align: 5px;
+                                    font: 10px/1.5 arial;
+                                    color:white;
+                                }
+                                i{
+                                    color:white; 
+                                    font: 12px/1.5 "Microsoft yahei";
+                                }
+                               
+                            }
                         }
                     }
                     .scenic_img:nth-child(1),.scenic_img:nth-child(2){
@@ -436,6 +471,48 @@ body,html{
                         padding-right:0.025rem;
                     }
                 }
+                .ol_order_right2{                    
+                    height:3rem;
+                    padding:0;
+                    margin:0;
+                    padding-left:0.05rem;
+                    .scenic_img{
+                        position:relative;
+                        width:100%;
+                        height:100%;
+                        overflow:hidden;
+                        img{
+                            display:block;
+                            width:100%;
+                            height:100%;
+                            -moz-transition:all 0.8s;
+                            -webkit-transition: all 0.8s;
+                            transition:all 0.8s;
+                        }
+                        img:hover{
+                            -moz-transform:scale(1.1,1.1) ;
+                            -webkit-transform:scale(1.1,1.1) ;
+                            transform:scale(1.1,1.1);
+                        }
+                        div{
+                            position:absolute;
+                            left:0;
+                            bottom:0;
+                            width:100%;
+                            height:0.5rem;
+                            background:rgba(0,0,0,.5);
+                            @include font(0.14rem,null,0.5rem,white,null);
+                            text-indent:1em;
+                            a{
+                                float:right;
+                                margin-right:1em;
+                                color:#f66;
+                            }
+                        }
+                    }
+                    
+                }
+                
 //----------------------------------- 酒店住宿   -----------------------------------------//           
                 .accommodation{
                     width:100%;
@@ -563,9 +640,9 @@ body,html{
                                 transition:all 0.8s;
                             }
                             img:hover{
-                                -moz-transform:scale(1.2,1.2) ;
-                                -webkit-transform:scale(1.2,1.2) ;
-                                transform:scale(1.2,1.2);
+                            -moz-transform:scale(1.1,1.1) ;
+                            -webkit-transform:scale(1.1,1.1) ;
+                            transform:scale(1.1,1.1);
                             }
                             .img_info2{
                                 position:absolute;

@@ -58,7 +58,6 @@ body,html{
     z-index:-999;
     width:100%;
     height:100%;
-    background:red;
     margin:$center;
     .swiper-container{
         width:100%;
@@ -139,20 +138,29 @@ body,html{
                 height:1.6rem;
                 box-sizing:border-box;
                 color:#424242;
+                overflow:hidden;
             }
             .level2{  
-                display:block;
-                float:left;
+                display:inline-block;
+               // float:left;
                 width:0;
-                height:1.6rem;
-                writing-mode: tb-rl;
+                //height:1.6rem;
+//              writing-mode: tb-rl;
+//              -webkit-writing-mode: tb-rl;
                 box-sizing:border-box;
-                color:#424242;
-                text-align: center;
-                text-decoration: none;
+                word-wrap: break-word;
+                letter-spacing: 0.08rem;
+                vertical-align: middle;
                 @include font(0.14rem,null,0.2rem,null,center);
                 overflow: hidden;
             }
+        }
+        li:before{
+            content:"";
+            display: inline-block;
+            vertical-align: middle;
+            width: 0;
+            height:1.6rem;
         }
     }
 }
@@ -229,42 +237,6 @@ body,html{
 //      background-size:contain;
     }
 }
-#separated .separated_con dl{
-    float:left;
-    width:1.53rem;
-    height:100%;
-    dt{
-        vertical-align: middle;
-        text-align: center;
-        width:1.53rem;
-        height:0.3rem;
-        img{
-            display:inline-block;
-            vertical-align: middle;
-            width:100%;
-            height:100%;
-            border:0;
-            border:none;
-        }
-        span{
-            display:inline-block;
-            width:1px;
-            height:100%;
-            vertical-align: middle;
-            visibility:hidden;
-        }
-    }
-    dd{
-        width:1.53rem;
-        height:0.14rem;
-        text-align: center;
-        a{
-            display:inline-block;
-            @include font(0.14rem,null,0.2rem,#000,center);
-            text-decoration: none;
-        }
-    }
-}
 //内容区域
 #main{
     width:9.8rem;
@@ -281,7 +253,7 @@ body,html{
         border-radius: 0.05rem 0 0 0.05rem;
         box-sizing:border-box;
         -webkit-box-sizing: border-box;
-         .main_left{
+        .main_left{
         float:left;
         width:5.36rem;
         height:2rem;
@@ -514,7 +486,8 @@ body,html{
                                 text-indent:1em;
                                 color:#484848;  
                                 text-align: center;   
-                                height:0.14rem;                         
+                                height:0.14rem;
+                                background:white;                         
                             }
                         }
                     }

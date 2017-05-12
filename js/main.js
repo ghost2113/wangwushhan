@@ -8,10 +8,9 @@ $(function(){
 	})
 	//选项卡
 	$(".main_right_title li").click(function(){
-
 		//console.log($(this).index())
 		var index = $(this).index();
-		console.log($(".t_online_con form").eq(index))
+		//console.log($(".t_online_con form").eq(index))
 		$(this).addClass("main_right_title_active").siblings().removeClass("main_right_title_active");
 		$(".t_online_con form").eq(index).css("display","block").siblings().css("display","none");
 	})
@@ -24,7 +23,10 @@ $(function(){
     		"border-radius":"0 0 0.1rem 0.1rem",
     		"color":"white",
     		"background":"rgba(0,0,0,.7) no-repeat right bottom",
-    		"background-image":"url(../images/nav_bg.png)"
+    		"background-image":"url(../images/nav_bg.png)",
+    		"width":"0.9rem",
+			"width":"auto !important",
+			"min-width":"0.9rem"
     	})
 		$(".header_nav2 li").eq($(this).index()).children("a").css({"color":"#fff"});
 		
@@ -81,8 +83,8 @@ $(function(){
 	 * 选项卡效果实现
 	 */
 	$(".t_nav_list li").click(function(){
-		console.log($(this).index())
-		console.log($(this).find("a").eq(0).html())
+		//console.log($(this).index())
+		//console.log($(this).find("a").eq(0).html())
 		var index = $(this).index();
 //		标签列表颜色改变
 		$(this).find("a").css("color","#af370a");
@@ -94,20 +96,19 @@ $(function(){
 		$(".t_sub_conlist").eq(index).css("display","block");
 		$(".t_sub_conlist").eq(index).siblings().css("display","none");
 	})
-	$(".t_nav_list li").eq(0).trigger("click");
-	
-	
+	$(".t_nav_list li").eq(0).trigger("click");	
 	/**
 	 * 景区介绍轮播图
 	 */
 	function shuffling(direction){
 		//由参数判断轮播图滑动方向，+右 -左
-		console.log(1)
+		//console.log(1)
 		var direc = 1*direction;
 		var width = $(".t_attractionsbox_position li:eq(0)").width();
 		var allNum = $(".t_attractionsbox_position li").length;		
 		var count = 0;
 		$(".t_attractionsbox_position").animate({"left":direc*width},500)
 	}
+	/*********************************************游玩指南页面 ***************************************************************/
 
 })
