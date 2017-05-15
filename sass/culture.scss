@@ -56,12 +56,12 @@ body,html{
 #header{
     position:relative;
     width:9.8rem;
-    height:2rem; 
-    margin:0 auto;  
-    .logo{
-        @include position(absolute,0.7rem,null,null,0.4rem);
+    height:2rem;
+    margin:0 auto 2rem;    
+    .logo{        
         width:0.6rem;
         height:0.9rem;
+        @include position(absolute,0.7rem,null,null,0.4rem);
         background:url(../images/logo3.png) no-repeat center center;
         background-size:100% 100%;
     }
@@ -106,20 +106,29 @@ body,html{
                 height:1.6rem;
                 box-sizing:border-box;
                 color:#424242;
+                overflow:hidden;
             }
             .level2{  
-                display:block;
-                float:left;
+                display:inline-block;
+               // float:left;
                 width:0;
-                height:1.6rem;
-                writing-mode: tb-rl;
+                //height:1.6rem;
+//              writing-mode: tb-rl;
+//              -webkit-writing-mode: tb-rl;
                 box-sizing:border-box;
-                color:#424242;
-                text-align: center;
-                text-decoration: none;
+                word-wrap: break-word;
+                letter-spacing: 0.08rem;
+                vertical-align: middle;
                 @include font(0.14rem,null,0.2rem,null,center);
                 overflow: hidden;
             }
+        }
+        li:before{
+            content:"";
+            display: inline-block;
+            vertical-align: middle;
+            width: 0;
+            height:1.6rem;
         }
     }
 }
@@ -173,9 +182,9 @@ body,html{
     .main_left{
 //      float:left;
 //      width:2.5rem;
-        height:2.8rem;
+        height:2.4rem;
         height:auto !important;
-        min-height:2.8rem;  
+        min-height:2.4rem;  
         .t_nav_list{
             width:100%;
             height:2rem;
@@ -195,11 +204,6 @@ body,html{
                     line-height: 0.32rem;
                     font-size: 0.14rem;
                     color:#3c3c3c;                   
-                }
-            }
-            li:nth-child(1){
-                a{
-                    color:#af370a;
                 }
             }
         }
@@ -258,7 +262,7 @@ body,html{
             min-height:2.4rem; 
             .t_sub_conlist{
                 position:relative;
-                display:none;
+                display:block;
                 width:100%;
                 height:2.4rem;
                 height:auto !important;

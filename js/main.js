@@ -82,9 +82,7 @@ $(function(){
 	/**
 	 * 选项卡效果实现
 	 */
-	$(".t_nav_list li").click(function(){
-		//console.log($(this).index())
-		//console.log($(this).find("a").eq(0).html())
+/*	$(".t_nav_list li").click(function(){
 		var index = $(this).index();
 //		标签列表颜色改变
 		$(this).find("a").css("color","#af370a");
@@ -96,7 +94,7 @@ $(function(){
 		$(".t_sub_conlist").eq(index).css("display","block");
 		$(".t_sub_conlist").eq(index).siblings().css("display","none");
 	})
-	$(".t_nav_list li").eq(0).trigger("click");	
+	$(".t_nav_list li").eq(0).trigger("click");	*/
 	/**
 	 * 景区介绍轮播图
 	 */

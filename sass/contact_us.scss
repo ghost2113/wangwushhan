@@ -1,0 +1,39 @@
+@charset "utf-8";
+//居中
+$center:0 auto;
+//字体样式
+@mixin font($size,$weight,$lineheight,$color,$location){
+    font-size:$size;
+    font-weight:$weight;
+    line-height:$lineheight;
+    color:$color;
+    text-align:$location;
+}
+//定位
+@mixin position($type,$top,$right,$bottom,$left){    
+    position:$type;  
+    top:$top;
+    right:$right;
+    bottom:$bottom;
+    left:$left;
+}
+//默认字体选中背景色和字体样色
+::selection{
+background:#1bba9e;
+color:#fff;
+}
+//引入图标
+@font-face {
+  font-family: 'iconfont';  /* project id 186524 */
+  src: url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.eot');
+  src: url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}

@@ -167,8 +167,6 @@ body, html {
   line-height: 0.32rem;
   font-size: 0.14rem;
   color: #3c3c3c; }
-#main .main_left .t_nav_list li:nth-child(1) a {
-  color: #af370a; }
 #main .main_left .t_sub_imglist {
   width: 100%;
   height: 2.8rem;
@@ -198,7 +196,6 @@ body, html {
   font-size: 0.2rem;
   font-weight: 600;
   line-height: 0.3rem;
-  color: #af370a;
   text-align: center; }
 #main .main_right {
   height: 2.4rem;
@@ -221,7 +218,7 @@ body, html {
   min-height: 2.4rem; }
 #main .main_right .t_sub_con .t_sub_conlist {
   position: relative;
-  display: none;
+  display: block;
   width: 100%;
   height: 2.4rem;
   height: auto !important;
