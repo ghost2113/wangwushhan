@@ -12,11 +12,12 @@
 		<link rel="stylesheet" href="css/culture.css"/>
 		<link rel="stylesheet" href="css/contact_us.css" />
 		<link rel="stylesheet" href="libs/css/swiper-3.4.0.min.css" />
-		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-		<script type="text/javascript" src="script/moment.js" ></script>
 		<script type="text/javascript" src="libs/js/rem.js" ></script>
 		<script type="text/javascript"src="libs/js/swiper-3.4.0.min.js"></script>
 		<script type="text/javascript" src="libs/js/jquery-1.11.3.js" ></script>
+	    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+	    <script src="http://webapi.amap.com/maps?v=1.3&key=c93e1e293e5b1c3dc581f3ff633144d3&plugin=AMap.Autocomplete,AMap.PlaceSearch,AMap.Walking,AMap.Riding"></script>
+	    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
 	</head>
 	<body>
 		<header id="header">
@@ -115,7 +116,7 @@
 			<div class="main_left col-sm-3 col-xs-12">
 				<ul class="t_nav_list">
 					<li><a href="#">景区热线</a></li>
-					<li><a href="#">景区导航</a></li>
+					<li><a style="color:#af370a;" href="#">地图导航</a></li>
 					<li><a href="#">在线留言</a></li>	
 				</ul>
 				<ul class="t_sub_imglist">
@@ -128,41 +129,61 @@
 			<div class="main_right  col-sm-9 col-xs-12">
 				<p class="t_sub_process">
 					<span>首页</span><span>></span>
-					<span>资讯活动</span><span>></span>
-					<span>旅游新闻</span>
+					<span>联系我们</span><span>></span>
+					<span style="color:#af370a;">地图导航</span>
 				</p>
 				<div class="t_sub_con">
 <!--------------------------------------------------------景区热线--------------------------------------------------->
-					<div class="t-sub_news t_sub_conlist">
-						<div class="t_sub_conimg"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1494589076164&di=1b7c31a9f8848759f6d89f90a67dea5e&imgtype=0&src=http%3A%2F%2Fwww.hnwsly.com%2Fup_files%2F%25D3%25DE%25B9%25AB%25B9%25CA%25C0%25EF%25B5%25C0%25BD%25CC%25CA%25A5%25B5%25D8%25A3%25A8%25B1%25B3%25BE%25B0%25B0%25E5%25A3%25A9%2520%25BF%25BD%25B1%25B4.jpg" alt="" /></div>
-						<ul class="tw_news">
-							<li><a href=""><span>王屋山路书</span><span>2017-08-12</span></a></li>
-							<li><a href=""><span>河南旅游注意事项</span><span>2017-07-12</span></a></li>
-							<li><a href=""><span>旅游服饰选择注意事项</span><span>2017-06-12</span></a></li>
-							<li><a href=""><span>境外游要注意各国的禁忌</span><span>2017-05-12</span></a></li>
-							<li><a href=""><span>泡温泉掌握正确步骤</span><span>2017-03-12</span></a></li>
-							<li><a href=""><span>长假出游不打无准备之仗</span><span>2016-08-12</span></a></li>
-							<li><a href=""><span>出游健康最重要 高血压人群旅游全攻略</span><span>2016-08-12</span></a></li>
-						</ul>						
-					</div>	
 <!-------------------------------------------------------地图导航---------------------------------------------------->
-					<div class="t_sub_conlist">
-						
+					<div class="t_sub_map t_sub_conlist ">
+						<div class="t_sub_map">
+							<div id="myPageTop">
+							    <a href="javascript:void(0);" id="show">
+							        王屋山风景区导航搜索
+							    </a>
+							    <div class="pageShow">
+							        <h5>搜索地址</h5>
+							        <input id="tipinput" placeholder="请输入查询地址">
+							        <h5>搜索行车路径</h5>
+							        <input id="star" placeholder="行车开始地址">
+							        <input id="end" placeholder="行车结束地址" value="王屋山风景区">
+							        <a id="car" href="javascript:void(0);">
+							            搜索路线
+							        </a>
+							
+							        <!--<h3>搜索骑行路径</h3>
+							        <input id="cStar" placeholder="骑行开始地址">
+							        <span>—&nbsp;—</span>
+							        <input id="cEnd" placeholder="骑行结束地址">
+							        <span>—&nbsp;—</span>
+							        <a id="riding" href="javascript:void(0);">
+							            点击搜索
+							        </a>-->
+							
+							        <!--<h3>搜索步行路径</h3>
+							        <input id="wStar" placeholder="步行开始地址">
+							        <span>—&nbsp;—</span>
+							        <input id="wEnd" placeholder="步行结束地址">
+							        <span>—&nbsp;—</span>
+							        <a id="walk" href="javascript:void(0);">
+							            点击搜索
+							        </a>-->
+							        <!--<div style="margin:20px 0;">
+							            <a id="box" href="javascript:void(0);">
+							                鼠标右键拖取选框放大地图
+							            </a>
+							            <a id="meter" href="javascript:void(0);">
+							                测量距离
+							            </a>
+							        </div>-->
+							    </div>
+							</div>
+							<div id="container"></div>
+							<div id="panel"></div>
+						</div>											
 					</div>	
 <!-------------------------------------------------------在线留言---------------------------------------------------->					
-					<div class="t-sub_strategy t_sub_conlist">
-						<div class="t_sub_strategyimg"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1494588966337&di=cdf52c34eaf68903a43aaf352be7301a&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D00ed5bd336a85edffa8cfe2b795609d8%2F021e9d16fdfaaf514f02b33c8e5494eef11f7a51.jpg" alt="" /></div>
-						<ul class="tw_strategy">
-							<li><a href=""><span>王屋山路书</span><span>2017-08-12</span></a></li>
-							<li><a href=""><span>河南旅游注意事项</span><span>2017-07-12</span></a></li>
-							<li><a href=""><span>旅游服饰选择注意事项</span><span>2017-06-12</span></a></li>
-							<li><a href=""><span>境外游要注意各国的禁忌</span><span>2017-05-12</span></a></li>
-							<li><a href=""><span>泡温泉掌握正确步骤</span><span>2017-03-12</span></a></li>
-							<li><a href=""><span>长假出游不打无准备之仗</span><span>2016-08-12</span></a></li>
-							<li><a href=""><span>出游健康最重要 高血压人群旅游全攻略</span><span>2016-08-12</span></a></li>
-						</ul>						
-					</div>	
-<!----------------------------------------------------------end---------------------------------------------------->	
+<!----------------------------------------------------------end------------------------------------------------------>	
 				</div>
 			</div>
 
@@ -200,17 +221,18 @@
 		<!--背景-->
 		<div id="t_bg_top"></div>
 		<script> 
-		var mySwiper = new Swiper('.swiper-container', {
-			autoplay: 2000,//可选选项，自动滑动
-			direction : 'horizontal',
-			loop : true,
-			effect : 'fade',
-			fade: {
-			  crossFade: false,
-			},
-			pagination : '.swiper-pagination',
-		})
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: 2000,//可选选项，自动滑动
+				direction : 'horizontal',
+				loop : true,
+				effect : 'fade',
+				fade: {
+				  crossFade: false,
+				},
+				pagination : '.swiper-pagination',
+			})
 		</script>
 		<script type="text/javascript" src="js/main.js" ></script>
+		<script type="text/javascript" src="js/main-map.js" ></script>
 	</body>
 </html>

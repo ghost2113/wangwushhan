@@ -267,7 +267,7 @@ body,html{
                 height:2.4rem;
                 height:auto !important;
                 min-height:2.4rem;    
-                padding-bottom:2rem;   
+                padding-bottom:1.6rem;   
                 line-height: 2;         
             }   
             //景区介绍
@@ -379,48 +379,36 @@ body,html{
 //      景点轮播
         .t_jqjs_attractionslist{
             position:absolute;
-            bottom:0;
+            bottom:0.1rem;
             left:0;
-            display:flex;
-            display:-webkit-flex;
-            flex-direction: row;
-            -webkit-flex-direction: row;
-            -ms-flex-direction: row;
             width:100%;
-            height:2rem;
-            overflow:hidden;
-            .t_attractionsbox{  
-                position:relative;            
-                flex:1;                
+            height:1.6rem;
+            padding-top:0.1rem;
+            background:white;
+            border-radius:0.03rem;
+            box-shadow: 0 0 0.05rem 0.05rem rgba(0,0,0,0.1);
+            //overflow:hidden;
+            .swiper-container{
+                width:100%;
                 height:100%;
-                .t_attractionsbox_position{
-                    position:absolute;
-                    left:0;
-                    top:0;
-                }
-                li{
-                    height:2rem;
-                    img{
-                        display:block;
-                        width:100%;
-                        height:1.4rem;
+                .swiper-wrapper{
+                    width:100%;
+                    height:100%;
+                    .swiper-slide{
+                        padding:0 0.05rem;
+                        img{
+                            display:block;
+                            width:100%;
+                            height:1.2rem;
+                        }
+                        a{
+                            display:block;
+                            width:100%;
+                            height:0.3rem;
+                            @include font(0.16rem,null,0.3rem,#af370a,center);
+                        }                    
                     }
-                    a{
-                        display:block;
-                        width:100%;
-                        height:0.6rem;
-                        @include font(0.16rem,null,0.6rem,#696969,center);
-                    }
-                    
                 }
-            }
-            .t_attractionsbox_pre,.t_attractionsbox_next{
-                width:0.5rem;
-                height:100%;
-                text-align: center;
-                line-height:2rem;
-                font-size:0.36rem;
-                cursor: pointer;
             }
         }
     }

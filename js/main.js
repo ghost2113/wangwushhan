@@ -100,13 +100,21 @@ $(function(){
 	 */
 	function shuffling(direction){
 		//由参数判断轮播图滑动方向，+右 -左
-		//console.log(1)
+		console.log(direction)
 		var direc = 1*direction;
 		var width = $(".t_attractionsbox_position li:eq(0)").width();
-		var allNum = $(".t_attractionsbox_position li").length;		
-		var count = 0;
-		$(".t_attractionsbox_position").animate({"left":direc*width},500)
+		var allNum = $(".t_attractionsbox_position li").length;				
+		var left = parseInt($(".t_attractionsbox_position").css("left"))+direc*width;//容器宽度度转化为数字
+		console.log({"width":width,"allNum":allNum,"direc":direc,"left":left})		
+		$(".t_attractionsbox_position").animate({"left": left},500)
 	}
+	$(".t_jqjs_attractionslist").on("click",".t_attractionsbox_pre",function(){
+		shuffling(1);
+	});
+	$(".t_jqjs_attractionslist").on("click",".t_attractionsbox_next",function(){
+		shuffling(-1);
+	});
 	/*********************************************游玩指南页面 ***************************************************************/
+	
 
 })

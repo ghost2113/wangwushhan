@@ -156,33 +156,33 @@
 						</div>
 						<!--文化列表轮播-->
 						<div class="t_jqjs_attractionslist">
-							<div class="t_attractionsbox_pre iconfont">&#xe614;</div>
-							<div class="t_attractionsbox">
-								<ul class="row t_attractionsbox_position">
-									<li class="col-md-4 col-sm-6">
-										<img src="http://p2.so.qhimgs1.com/t012d0a481de738688e.jpg" alt="" />
-										<a href="">道教天下第一洞天</a>
-									</li>
-									<li class="col-md-4 col-sm-6">
-										<img src="http://210.51.56.58/fileupload/jingdianimg/youzai/suoyoujingdiantupian/wangwushanfengjingqu.jpg" alt="" />
+							<div class="swiper-container">
+							    <div class="swiper-wrapper">
+							        <div class="swiper-slide">
+							        	<img src="http://p2.so.qhimgs1.com/t012d0a481de738688e.jpg" alt="" />
+										<a href="#">道教天下第一洞天</a>
+							        </div>
+							        <div class="swiper-slide">
+							        	<img src="http://210.51.56.58/fileupload/jingdianimg/youzai/suoyoujingdiantupian/wangwushanfengjingqu.jpg" alt="" />
 										<a href="">	济水</a>
-									</li>
-									<li class="col-md-4 col-sm-6">
+							        </div>
+									<div class="swiper-slide">
 										<img src="images/001DyMiKzy778GvjtL775&690.jpg" alt="" />
 										<a href="">孙思邈</a>
-									</li>
-									<li class="col-md-4 col-sm-6">
-										<img src="http://www.wwsjq.com/UploadSour/pic/04/21101440470.jpg" alt="" />
-										<a href="">王屋山云海</a>
-									</li>
-									<li class="col-md-4 col-sm-6">
-										<img src="http://www.wwsjq.com/UploadSour/pic/04/21101440470.jpg" alt="" />
-										<a href="">王屋山云海</a>
-									</li>
-								</ul>
+							        </div>
+							        <div class="swiper-slide">
+							        	<img src="http://210.51.56.58/fileupload/jingdianimg/youzai/suoyoujingdiantupian/wangwushanfengjingqu.jpg" alt="" />
+										<a href="">	济水</a>
+							        </div>
+							        <div class="swiper-slide">
+							        	<img src="http://210.51.56.58/fileupload/jingdianimg/youzai/suoyoujingdiantupian/wangwushanfengjingqu.jpg" alt="" />
+										<a href="">	济水</a>
+							        </div>
+							    </div>							    
+							    <!-- 如果需要滚动条 -->
+							    <div class="swiper-scrollbar"></div>
 							</div>
-						    <div class="t_attractionsbox_next iconfont">&#xe615;</div>
-						</div>		
+						</div>								
 					</div>
 <!-------------------------------------------------------旅游视频---------------------------------------------------->							
 					
@@ -225,16 +225,16 @@
 		<!--背景-->
 		<div id="t_bg_top"></div>
 		<script> 
-		var mySwiper = new Swiper('.swiper-container', {
-			autoplay: 2000,//可选选项，自动滑动
-			direction : 'horizontal',
-			loop : true,
-			effect : 'fade',
-			fade: {
-			  crossFade: false,
-			},
-			pagination : '.swiper-pagination',
-		})
+			$(function(){
+				var mySwiper = new Swiper('.swiper-container', {
+					slidesPerView : 4,
+					slidesPerGroup : 1,
+					autoplay: 1000,//可选选项，自动滑动
+					direction : 'horizontal',
+					loop : true,
+					scrollbar:'.swiper-scrollbar',
+				})
+			})			
 		</script>
 		<script type="text/javascript" src="js/main.js" ></script>
 	</body>
