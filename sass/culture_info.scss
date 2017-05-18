@@ -66,10 +66,10 @@ color:#fff;
             width:100%;
             height:0.5rem;
             margin-bottom:0;
-            @include font(0.24rem,null,0.4rem,$styleCol,null);
+            @include font(0.24rem,null,0.4rem,$styleCol,center);
         }
         p{
-            @include font(0.12rem,null,0.2rem,#666,null);
+            @include font(0.12rem,null,0.2rem,#666,center);
             font-family: "Segoe UI",Arial,sans-serif;
             em{
                 margin-right:1em;
@@ -81,10 +81,12 @@ color:#fff;
             height:auto !important;
             min-height:4rem;
             margin:0 auto;     
+            padding:0.1rem;
             text-align:center;   
             p{
-                text-align:justify;
                 margin:0.1rem;
+                @include font(0.14rem,null,0.26rem,#676767,justify);
+                text-indent:2em;
             }    
             img{
                 display:inline-block;

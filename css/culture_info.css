@@ -37,11 +37,13 @@
   margin-bottom: 0;
   font-size: 0.24rem;
   line-height: 0.4rem;
-  color: #af370a; }
+  color: #af370a;
+  text-align: center; }
 #main .info_box p {
   font-size: 0.12rem;
   line-height: 0.2rem;
   color: #666;
+  text-align: center;
   font-family: "Segoe UI",Arial,sans-serif; }
 #main .info_box p em {
   margin-right: 1em; }
@@ -51,10 +53,15 @@
   height: auto !important;
   min-height: 4rem;
   margin: 0 auto;
+  padding: 0.1rem;
   text-align: center; }
 #main .info_box .info_con p {
+  margin: 0.1rem;
+  font-size: 0.14rem;
+  line-height: 0.26rem;
+  color: #676767;
   text-align: justify;
-  margin: 0.1rem; }
+  text-indent: 2em; }
 #main .info_box .info_con img {
   display: inline-block;
   width: 70%;
