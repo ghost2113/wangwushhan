@@ -96,25 +96,17 @@ $(function(){
 	})
 	$(".t_nav_list li").eq(0).trigger("click");	*/
 	/**
-	 * 景区介绍轮播图
+	 * 旅游视频  视频切换
 	 */
-	function shuffling(direction){
-		//由参数判断轮播图滑动方向，+右 -左
-		console.log(direction)
-		var direc = 1*direction;
-		var width = $(".t_attractionsbox_position li:eq(0)").width();
-		var allNum = $(".t_attractionsbox_position li").length;				
-		var left = parseInt($(".t_attractionsbox_position").css("left"))+direc*width;//容器宽度度转化为数字
-		console.log({"width":width,"allNum":allNum,"direc":direc,"left":left})		
-		$(".t_attractionsbox_position").animate({"left": left},500)
-	}
-	$(".t_jqjs_attractionslist").on("click",".t_attractionsbox_pre",function(){
-		shuffling(1);
-	});
-	$(".t_jqjs_attractionslist").on("click",".t_attractionsbox_next",function(){
-		shuffling(-1);
-	});
-	/*********************************************游玩指南页面 ***************************************************************/
+/*	$(".video_list").on("click",function(){
+		var _videoSrc = $(this).attr("data-src");
+		var _video = $(".video");
+		_video.attr("src",_videoSrc);
+		//显示标题
+		var _title = $(this).children("a").eq(0).html();
+		$(".video_box h5:eq(0)").html(_title);
+	})*/
+/*********************************************游玩指南页面 ***************************************************************/
 	
 
 })

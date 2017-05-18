@@ -32,7 +32,7 @@ body, html {
   position: relative;
   width: 9.8rem;
   height: 2rem;
-  margin: 0 auto; }
+  margin: 0 auto 1.5rem; }
 #header .logo {
   position: absolute;
   top: 0.7rem;

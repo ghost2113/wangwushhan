@@ -19,17 +19,17 @@ $center:0 auto;
 }
 //默认字体选中背景色和字体样色
 ::selection{
-background:#1bba9e;
-color:#fff;
+    background:#1bba9e;
+    color:#fff;
 }
 //引入图标
 @font-face {
   font-family: 'iconfont';  /* project id 186524 */
-  src: url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.eot');
-  src: url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_mwl5ebr93haor.eot');
+  src: url('//at.alicdn.com/t/font_mwl5ebr93haor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_mwl5ebr93haor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_mwl5ebr93haor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_mwl5ebr93haor.svg#iconfont') format('svg');
 }
 .iconfont{
     font-family:"iconfont" !important;
@@ -57,7 +57,7 @@ body,html{
     position:relative;
     width:9.8rem;
     height:2rem;
-    margin:0 auto 2rem;    
+    margin:0 auto 1.5rem;    
     .logo{        
         width:0.6rem;
         height:0.9rem;
@@ -238,8 +238,6 @@ body,html{
         }
     }
     .main_right{
-//      float:right;
-//      width:7rem;
         height:2.4rem;
         height:auto !important;
         min-height:2.4rem;    
@@ -319,8 +317,7 @@ body,html{
                     img{
                         display:block;
                         margin:0.2rem auto;                        
-                    }
-                    
+                    }                   
                 }
             }
             //旅游视频
@@ -328,7 +325,13 @@ body,html{
                 width:80%;
                 height:6rem;
                 margin:0 auto;
-                padding:10% 0 15%;
+                padding-bottom:20%;
+                h5{
+                    width:100%;
+                    height:0.5rem;  
+                    margin:0.2rem 0;
+                    @include font(0.20rem,null,0.5rem,#333,center);
+                }
                 .video{
                     width:100%;
                     height:100%;
@@ -355,6 +358,9 @@ body,html{
                     padding:0;
                     margin-bottom:0.5rem;
                     border-radius:0.8rem;
+                    box-shadow:0 0 10px 5px rgba(0,0,0,.3);
+                    transition: all 1s;
+                    -webkit-transition:all 0.5s;
                     overflow: hidden;
                     .t_scenic_list{
                         width:100%;
@@ -374,10 +380,14 @@ body,html{
                         }
                     }
                 }
+                .t_scenicbox:hover{
+                    box-shadow:none;
+                    transform:scale(1.2,1.2);
+                }
             }
         }
-//      景点轮播
-        .t_jqjs_attractionslist{
+        /*列表轮播*/
+        .t_jqjs_attractionslist,.culture_video_box{
             position:absolute;
             bottom:0.1rem;
             left:0;
@@ -395,22 +405,42 @@ body,html{
                     width:100%;
                     height:100%;
                     .swiper-slide{
+                        position:relative;
                         padding:0 0.05rem;
-                        img{
+                        a{
+                            display:block;
+                            width:100%;
+                            height:100%;
+                            img{
                             display:block;
                             width:100%;
                             height:1.2rem;
                         }
-                        a{
-                            display:block;
-                            width:100%;
-                            height:0.3rem;
-                            @include font(0.16rem,null,0.3rem,#af370a,center);
-                        }                    
+                            span{
+                                display:block;
+                                width:100%;
+                                height:0.3rem;
+                                @include font(0.16rem,null,0.3rem,#af370a,center);
+                            }                    
+                        }
+                        
                     }
                 }
             }
         }
+        .culture_video_box .swiper-container .swiper-wrapper .swiper-slide .video_mask{
+            position:absolute;
+            left:0;
+            right:0;
+            top:0.35rem;
+            width:0.5rem;
+            height:0.5rem;    
+            margin:0 auto;   
+            border-radius:0.25rem;   
+            @include font(0.2rem,null,0.5rem,#fff,center);  
+            background:rgba(0,0,0,.7);
+        }
+        /*列表轮播结束*/
     }
 }
 #footer{

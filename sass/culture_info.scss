@@ -1,0 +1,98 @@
+@charset "utf-8";
+//主题颜色
+$themeCol:#10cec0;
+$styleCol:#af370a;
+//字体样式
+@mixin font($size,$weight,$lineheight,$color,$location){
+    font-size:$size;
+    font-weight:$weight;
+    line-height:$lineheight;
+    color:$color;
+    text-align:$location;
+}
+//定位
+@mixin position($type,$top,$right,$bottom,$left){    
+    position:$type;  
+    top:$top;
+    right:$right;
+    bottom:$bottom;
+    left:$left;
+}
+//多行文本溢出
+@mixin ellipsis($count){
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+}
+//默认字体选中背景色和字体样色
+::selection{
+background:#1bba9e;
+color:#fff;
+}
+*{  
+    margin:0;
+    padding:0;
+}
+//引入图标
+@font-face {
+  font-family: 'iconfont';  /* project id 186524 */
+  src: url('//at.alicdn.com/t/font_mwl5ebr93haor.eot');
+  src: url('//at.alicdn.com/t/font_mwl5ebr93haor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_mwl5ebr93haor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_mwl5ebr93haor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_mwl5ebr93haor.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+#main{
+    .info_title{
+        width:100%;
+        height:0.4rem;
+        @include font(0.14rem,null,0.4rem,#3c3c3c,null);
+        border-bottom: 1px #1b1b1b solid;
+    }
+    .info_box{
+        width:100%;
+        height:4rem;
+        height:auto !important;
+        min-height:4rem;
+        h1{
+            width:100%;
+            height:0.5rem;
+            margin-bottom:0;
+            @include font(0.24rem,null,0.4rem,$styleCol,null);
+        }
+        p{
+            @include font(0.12rem,null,0.2rem,#666,null);
+            font-family: "Segoe UI",Arial,sans-serif;
+            em{
+                margin-right:1em;
+            }
+        }
+        .info_con{
+            width:100%;
+            height:4rem;
+            height:auto !important;
+            min-height:4rem;
+            margin:0 auto;     
+            text-align:center;   
+            p{
+                text-align:justify;
+                margin:0.1rem;
+            }    
+            img{
+                display:inline-block;
+                width:70%;
+                border-radius:0.1rem;
+                text-align:center;
+                margin:0.1rem;
+            }
+        }
+    }
+}
