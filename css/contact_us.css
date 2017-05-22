@@ -23,6 +23,7 @@
   min-height: 1rem;
   margin: 0 auto;
   padding: 10% 2.5%; }
+
 .t-sub_number .tw_number li {
   height: 0.4rem;
   width: 2.5rem;
@@ -30,10 +31,12 @@
   font-size: 0.12rem;
   line-height: 0.5rem;
   color: #3c3c3c; }
+
 .t-sub_number .tw_number li span:nth-child(1) {
   width: 0.8rem;
   display: inline-block;
   height: 100%; }
+
 .t-sub_number .tw_number li span:nth-child(2) {
   display: inline-block;
   height: 100%; }
@@ -145,14 +148,16 @@
   display: block; }
 
 #myPageTop input {
+  height: 0.26rem;
   text-indent: 1em;
   font-size: 12px;
   border: 1px solid #ccc;
   outline: none;
   background: none; }
 
-.pageShow h3 {
-  margin: 20px 0 10px; }
+.pageShow h5 {
+  margin: 20px 0 10px;
+  color: #3c3c3c; }
 
 #myPageTop .pageShow a {
   height: 0.3rem;
@@ -175,20 +180,120 @@
   width: 280px; }
 
 .infowindow-content {
-  padding: 12px 8px;
+  width: 100%;
+  height: 0.6rem;
   color: #fff;
   background: url(../images/contact_map_title_bg.png);
   background-size: cover; }
 
-h3 {
-  font-family: "Microsoft YaHei"; }
+.infowindow-content h3 {
+  font-family: "Microsoft YaHei";
+  font-size: 0.2rem !important;
+  text-align: center;
+  line-height: 0.6rem !important; }
 
 .pageShow {
   display: none; }
 
 /*******************************************************************在线留言***************************************************************/
+/**在线留言列表start**/
 .t-sub_message {
-  padding: 2.5%; }
+  padding: 2.5%;
+  /** 分页导航  **/
+  /** 分页导航  **/
+  /**在线留言列表end**/ }
+.t-sub_message .holder {
+  margin: 15px 0;
+  text-align: center;
+  margin-bottom: 1rem; }
+.t-sub_message .holder a {
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0 5px;
+  margin: 0 5px;
+  color: #333; }
+.t-sub_message .holder a.jp-previous {
+  margin-right: 15px; }
+.t-sub_message .holder a.jp-next {
+  margin-left: 15px; }
+.t-sub_message .holder a.jp-current, .t-sub_message a.jp-current:hover {
+  color: #FF4242;
+  font-weight: bold; }
+.t-sub_message .holder a.jp-disabled, .t-sub_message a.jp-disabled:hover {
+  color: #bbb; }
+.t-sub_message .holder a.jp-current, .t-sub_message a.jp-current:hover, .t-sub_message .holder a.jp-disabled, .t-sub_message a.jp-disabled:hover {
+  cursor: default;
+  background: none; }
+.t-sub_message .holder span {
+  margin: 0 5px; }
+.t-sub_message .itemContainer {
+  width: 100%;
+  height: 1rem;
+  height: auto !important;
+  min-height: 1rem; }
+.t-sub_message .itemContainer .item {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  flex-flow: row;
+  width: 100%;
+  height: 0.8rem;
+  margin-bottom: 0.4rem; }
+.t-sub_message .itemContainer .item .itemTime {
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 0.1rem 0;
+  border-radius: 0.05rem;
+  background: #10cec0; }
+.t-sub_message .itemContainer .item .itemTime span:nth-child(1) {
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  font-size: 0.12rem;
+  font-weight: 500;
+  line-height: 0.2rem;
+  color: #fff;
+  text-align: center; }
+.t-sub_message .itemContainer .item .itemTime span:nth-child(2) {
+  display: block;
+  width: 100%;
+  height: 0.4rem;
+  font-size: 0.3rem;
+  line-height: 0.4rem;
+  color: #696969;
+  text-align: center;
+  font-style: italic; }
+.t-sub_message .itemContainer .item .itemCon {
+  flex: 1;
+  height: 0.8rem;
+  padding: 0 0.05rem 0 0.1rem;
+  overflow: hidden; }
+.t-sub_message .itemContainer .item .itemCon p:nth-child(1) {
+  width: 100%;
+  height: 0.26rem;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px dashed #10cec0;
+  font-size: 0.14rem;
+  font-weight: 600;
+  line-height: 0.26rem;
+  color: #000; }
+.t-sub_message .itemContainer .item .itemCon p:nth-child(2) {
+  width: 100%;
+  height: 0.54rem;
+  margin: 0;
+  padding: 0.03rem;
+  font-size-adjust: none;
+  font-size: 0.1rem;
+  font-weight: 500;
+  line-height: 0.16rem;
+  color: #999999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; }
 .t-sub_message #exampleInputEmail2 {
   width: 100%;
   height: 2rem; }

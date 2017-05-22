@@ -1,6 +1,8 @@
 @charset "utf-8";
 //居中
 $center:0 auto;
+//主题颜色
+$color:#10cec0;
 //字体样式
 @mixin font($size,$weight,$lineheight,$color,$location){
     font-size:$size;
@@ -16,6 +18,14 @@ $center:0 auto;
     right:$right;
     bottom:$bottom;
     left:$left;
+}
+//多行文本溢出
+@mixin ellipsis($count){
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
 }
 //默认字体选中背景色和字体样色
 ::selection{
@@ -261,7 +271,7 @@ body,html{
                 padding-bottom:2rem;   
                 line-height: 2;      
             }
-//                                                  旅游新闻
+// 旅游新闻/公告/报道
             .t-sub_news{
                 .t_sub_conimg{
                     width:80%;
@@ -299,9 +309,81 @@ body,html{
                     }
                 }
             }  
-//                                                  旅游公告 
-//                                                  景区营销活动 
-//                                                  媒体报道           
+/**景区营销活动start**/                                               
+            .actTitImg{
+                width:80%;
+                height:3rem;
+                margin:0 auto 0.5rem ;
+                    img{
+                        display:block;
+                        width:100%;
+                        height:100%;
+                    }
+            };
+            .activity{
+                width:100%;
+                height:100%;
+                padding-top:0.5rem;
+                .actConList{
+                    display:flex;
+                    display:-webkit-flex;
+                    flex-direction:row;
+                    width:100%;
+                    height:1.4rem;
+                    padding:0.1rem;
+                    margin:0;
+                    border-bottom: 1px #3c3c3c dashed;
+                    dt{
+                        width:1.2rem;
+                        height:100%;
+                        padding:0.1rem;
+                        img{
+                            display:block;
+                            width:100%;
+                            height:100%;
+                            border-radius:0.1rem;
+                        }
+                    }
+                    dd{
+                        flex:1;
+                        height:100%;
+                        padding:0.1rem 0.1rem 0.1rem 0.2rem;
+                        h5{
+                            width:100%;
+                            height:0.3rem;
+                            margin:0;
+                            padding:0;
+                            @include font(0.18rem,600,0.2rem,#af370a,null);
+                        }
+                        p:nth-of-type(1){
+                            width:100%;
+                            height:0.4rem;
+                            margin:0;
+                            padding:0;
+                            @include ellipsis(3);
+                            @include font(0.14rem,null,0.2rem,#999,null);
+                        }
+                        p:nth-of-type(2){
+                            width:100%;
+                            height:0.3rem;
+                            margin:0;
+                            padding:0;
+                            @include font(0.14rem,null,0.3rem,#af370a,null);
+                            span{
+                                float:left;
+                                display:inline-block;
+                                color:#333;
+                            }
+                            a{
+                                float:right;
+                                display:inline-block;
+                                color:#AF370A;
+                            }
+                        }
+                    }
+                }
+            } 
+/**景区营销活动end**/                   
         }
     }
 }
