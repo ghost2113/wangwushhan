@@ -35,11 +35,11 @@ color:#fff;
 //引入图标
 @font-face {
   font-family: 'iconfont';  /* project id 186524 */
-  src: url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.eot');
-  src: url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_t3mzhuhyrbsatt9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_x7vlplmhkc5wmi.eot');
+  src: url('//at.alicdn.com/t/font_x7vlplmhkc5wmi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_x7vlplmhkc5wmi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_x7vlplmhkc5wmi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_x7vlplmhkc5wmi.svg#iconfont') format('svg');
 }
 .iconfont{
     font-family:"iconfont" !important;
@@ -213,13 +213,48 @@ color:#fff;
         }
     }
 } 
-// --------------------------------------------------导游服务---------------------------------------------------  
+// --------------------------------------------------导游服务--------------------------------------------------- 
+.t_guiderNum{
+    width:100%;
+    height:0.8rem;
+    margin:0;
+    padding:0.2rem 0 0.1rem 0;
+    dt{
+        float:right;
+        width:0.5rem;
+        height:0.5rem;
+        margin-right:0.1rem;
+        span{
+            display:block;
+            width:0.5rem;
+            height:0.5rem;
+            @include font(0.4rem,null,0.5rem,$color,center);
+            animation:tada 1s infinite;
+        }
+    }
+    dd{
+        float:right;
+        width:1rem;
+        width:auto !important;
+        min-width:1rem;
+        height:0.5rem;
+        margin-right:0.2rem;
+        span{
+            display:block;
+            width:100%;
+            height:50%;
+            @include font(0.14rem,null,0.25rem,#696969,null);
+        }
+        span:nth-child(2){
+            line-height:0.2rem;
+        }
+    }
+} 
 .t_guider{
     width:100%;
     height:4rem;
     height:auto !important;
     min-height:4rem;
-    padding:5% 0;
     .t_guiderbox{
         display:block;
         height:1.5rem;
@@ -261,10 +296,145 @@ color:#fff;
                 @include font(0.14rem,null,0.2rem,#3c3c3c,null);
                 overflow: auto;
                 text-indent:2em;
+                -ms-overflow-style:none;
+                overflow:-moz-scrollbars-none;
+                //overflow-y:hidden ;
             }
-            .t_guider_infodetail2::-webkit-scrollbar {display:none}
-
-
+            .t_guider_infodetail2::-webkit-scrollbar {display:none}            
         }
     }          
 } 
+// --------------------------------------------------订票系统--------------------------------------------------- 
+.t-sub_order{
+    padding:5% 5% 0 5%;
+    .orderTab{
+        float:left;
+        width:1rem;
+        height:3.2rem;
+        background:white;
+        li{
+            width:100%;
+            height:0.8rem;
+            box-sizing:border-box;
+            border-right: 1px solid #e1e1e1;
+            border-bottom: 1px solid #e1e1e1;
+            text-align:center;
+            background:#f3f3f3;
+            em,span{
+                display:inline-block;
+                @include font(0.14rem,null,0.8rem,#696969,center);
+            }
+            em{
+                font-size:0.18rem;
+            }
+        }
+        .orderActive{
+            border-right: none;
+            background:white;
+        }
+    }
+    .orderContainer{
+        float:left;
+        width:5rem;
+        height:3.2rem;
+        padding:0 0.1rem;
+        background:white;
+        .orderConChange{
+            width:100%;
+            height:100%;
+                    /**订票系统选项卡Tab**/
+            .orderTitle{
+                width:4.8rem;
+                height:0.3rem;      
+                margin:0.1rem auto 0;
+                border-bottom:2px solid #aaa; 
+                span{
+                    display:block;
+                    float: left;
+                    width: 0.9rem;
+                    height: 0.3rem;
+                    @include font(0.16rem,600,0.3rem,#555,center);
+                    border-bottom:2px solid $color; 
+                    color:$color;
+                }  
+            }
+            /**订票系统选项卡Info**/
+            .orderInfo{
+                position:relative;
+                width:100%;
+                height:2.6rem;
+                padding:0.4rem 0.1rem 0.1rem 0.1rem;
+                li{
+                    width:100%;
+                    height:0.3rem;
+                    margin-bottom:0.2rem;
+                }
+                label{
+                    width:0.6rem;
+                    height:0.3rem;
+                    margin:0;
+                    @include font(0.14rem,null,0.3rem,#555,center);
+                }
+                input{
+                    width:2rem;
+                    border-radius:0.02rem;
+                    border:1px solid #aaa;
+                }
+                span{
+                    font-size:0.2rem;
+                }
+                .orderBtn{
+                    position:absolute;
+                    right:0.2rem;
+                    bottom:0.2rem;
+                    width:0.8rem;
+                    height:0.3rem;
+                    border:none;
+                    border-radius:0.05rem;
+                    @include font(0.16rem,600,0.3rem,#fff,center);
+                    background:$color;                
+                }
+            }
+        }
+    }
+}
+.t-sub_order:after{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    overflow: hidden;
+    visibility: hidden;
+}
+@-webkit-keyframes tada{
+  10%, 20% {
+    -webkit-transform:  rotate3d(0, 0, 1, -3deg);
+    transform: rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: rotate3d(0, 0, 1, 3deg);
+    transform:rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: rotate3d(0, 0, 1, -3deg);
+    transform: rotate3d(0, 0, 1, -3deg);
+  }
+}
+@keyframes tada{
+  10%, 20% {
+    -webkit-transform:  rotate3d(0, 0, 1, -3deg);
+    transform: rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: rotate3d(0, 0, 1, 3deg);
+    transform:rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: rotate3d(0, 0, 1, -3deg);
+    transform: rotate3d(0, 0, 1, -3deg);
+  }
+}
