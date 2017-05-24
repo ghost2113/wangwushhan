@@ -16,6 +16,7 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale; }
 
+/***游客须知start****/
 .t-sub_news .t_sub_conimg {
   width: 80%;
   height: 3rem;
@@ -47,6 +48,8 @@
   display: block;
   float: right; }
 
+/***游客须知end****/
+/***门票价格start****/
 .t_tickets_price {
   display: flex;
   flex-direction: row;
@@ -141,6 +144,8 @@
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1); }
 
+/***门票价格end****/
+/***旅游攻略start****/
 .t-sub_strategy .t_sub_strategyimg {
   width: 80%;
   height: 3rem;
@@ -172,6 +177,8 @@
   display: block;
   float: right; }
 
+/***旅游攻略end****/
+/***导游服务start****/
 .t_guiderNum {
   width: 100%;
   height: 0.8rem;
@@ -190,7 +197,9 @@
   line-height: 0.5rem;
   color: #10cec0;
   text-align: center;
-  animation: tada 1s infinite; }
+  animation: tada 1s infinite;
+  background: url(../images/guideSerNum.png) no-repeat center center;
+  background-size: 100% 100%; }
 .t_guiderNum dd {
   float: right;
   width: 1rem;
@@ -260,125 +269,171 @@
 .t_guider .t_guiderbox .t_guider_list .t_guider_infodetail2::-webkit-scrollbar {
   display: none; }
 
-.t-sub_order {
-  padding: 5% 5% 0 5%; }
-.t-sub_order .orderTab {
-  float: left;
-  width: 1rem;
-  height: 3.2rem;
-  background: white; }
-.t-sub_order .orderTab li {
+/***导游服务end****/
+/***订票系统start****/
+.orderEntry {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   width: 100%;
-  height: 0.8rem;
-  box-sizing: border-box;
-  border-right: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
-  text-align: center;
-  background: #f3f3f3; }
-.t-sub_order .orderTab li em, .t-sub_order .orderTab li span {
-  display: inline-block;
-  font-size: 0.14rem;
-  line-height: 0.8rem;
-  color: #696969;
-  text-align: center; }
-.t-sub_order .orderTab li em {
-  font-size: 0.18rem; }
-.t-sub_order .orderTab .orderActive {
-  border-right: none;
-  background: white; }
-.t-sub_order .orderContainer {
-  float: left;
-  width: 5rem;
-  height: 3.2rem;
-  padding: 0 0.1rem;
-  background: white; }
-.t-sub_order .orderContainer .orderConChange {
-  width: 100%;
-  height: 100%;
-  /**订票系统选项卡Tab**/
-  /**订票系统选项卡Info**/ }
-.t-sub_order .orderContainer .orderConChange .orderTitle {
-  width: 4.8rem;
-  height: 0.3rem;
-  margin: 0.1rem auto 0;
-  border-bottom: 2px solid #aaa; }
-.t-sub_order .orderContainer .orderConChange .orderTitle span {
+  height: 4rem;
+  height: auto !important;
+  min-height: 4rem;
+  padding: 5% 0; }
+.orderEntry .entryItemCon {
   display: block;
-  float: left;
-  width: 0.9rem;
-  height: 0.3rem;
-  font-size: 0.16rem;
-  font-weight: 600;
-  line-height: 0.3rem;
-  color: #555;
-  text-align: center;
-  border-bottom: 2px solid #10cec0;
-  color: #10cec0; }
-.t-sub_order .orderContainer .orderConChange .orderInfo {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5rem; }
+.orderEntry .entryItemCon .entryItem {
   position: relative;
   width: 100%;
-  height: 2.6rem;
-  padding: 0.4rem 0.1rem 0.1rem 0.1rem; }
-.t-sub_order .orderContainer .orderConChange .orderInfo li {
-  width: 100%;
-  height: 0.3rem;
-  margin-bottom: 0.2rem; }
-.t-sub_order .orderContainer .orderConChange .orderInfo label {
-  width: 0.6rem;
-  height: 0.3rem;
-  margin: 0;
-  font-size: 0.14rem;
-  line-height: 0.3rem;
-  color: #555;
-  text-align: center; }
-.t-sub_order .orderContainer .orderConChange .orderInfo input {
-  width: 2rem;
-  border-radius: 0.02rem;
-  border: 1px solid #aaa; }
-.t-sub_order .orderContainer .orderConChange .orderInfo span {
-  font-size: 0.2rem; }
-.t-sub_order .orderContainer .orderConChange .orderInfo .orderBtn {
-  position: absolute;
-  right: 0.2rem;
-  bottom: 0.2rem;
-  width: 0.8rem;
-  height: 0.3rem;
-  border: none;
-  border-radius: 0.05rem;
-  font-size: 0.16rem;
-  font-weight: 600;
-  line-height: 0.3rem;
-  color: #fff;
-  text-align: center;
-  background: #10cec0; }
-
-.t-sub_order:after {
-  content: "";
+  height: 100%;
+  border-radius: 0.1rem;
+  overflow: hidden; }
+.orderEntry .entryItemCon .entryItem img {
   display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden; }
+  width: 100%;
+  height: 100%; }
+.orderEntry .entryItemCon .entryItem .entryItem_info1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0.18rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #af370a;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  border-radius: 0.1rem; }
+.orderEntry .entryItemCon .entryItem .entryItem_info2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.18rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: white;
+  text-align: center;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 1s;
+  -webkit-transform: scale3d(0, 0, 0);
+  transform: scale3d(0, 0, 0); }
+.orderEntry .entryItemCon .entryItem:hover .entryItem_info1 {
+  -webkit-transform: scale3d(0, 0, 0);
+  transform: scale3d(0, 0, 0); }
+.orderEntry .entryItemCon .entryItem:hover .entryItem_info2 {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1); }
 
+/***订票系统end****/
+/***交通系统start****/
+.trafEntry {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  height: 4rem;
+  height: auto !important;
+  min-height: 4rem;
+  padding: 5% 0; }
+.trafEntry .entryItemCon {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5rem; }
+.trafEntry .entryItemCon .entryItem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.1rem;
+  overflow: hidden; }
+.trafEntry .entryItemCon .entryItem img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+.trafEntry .entryItemCon .entryItem .entryItem_info1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0.18rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #af370a;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 1s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  border-radius: 0.1rem; }
+.trafEntry .entryItemCon .entryItem .entryItem_info2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.18rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: white;
+  text-align: center;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 1s;
+  -webkit-transform: scale3d(0, 0, 0);
+  transform: scale3d(0, 0, 0); }
+.trafEntry .entryItemCon .entryItem:hover .entryItem_info1 {
+  -webkit-transform: scale3d(0, 0, 0);
+  transform: scale3d(0, 0, 0); }
+.trafEntry .entryItemCon .entryItem:hover .entryItem_info2 {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1); }
+
+/***交通系统end****/
+/**动画**/
 @-webkit-keyframes tada {
   10%, 20% {
-    -webkit-transform: rotate3d(0, 0, 1, -3deg);
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
     transform: rotate3d(0, 0, 1, -3deg); }
   30%, 50%, 70%, 90% {
-    -webkit-transform: rotate3d(0, 0, 1, 3deg);
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
     transform: rotate3d(0, 0, 1, 3deg); }
   40%, 60%, 80% {
-    -webkit-transform: rotate3d(0, 0, 1, -3deg);
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
     transform: rotate3d(0, 0, 1, -3deg); } }
 @keyframes tada {
   10%, 20% {
-    -webkit-transform: rotate3d(0, 0, 1, -3deg);
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
     transform: rotate3d(0, 0, 1, -3deg); }
   30%, 50%, 70%, 90% {
-    -webkit-transform: rotate3d(0, 0, 1, 3deg);
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
     transform: rotate3d(0, 0, 1, 3deg); }
   40%, 60%, 80% {
-    -webkit-transform: rotate3d(0, 0, 1, -3deg);
-    transform: rotate3d(0, 0, 1, -3deg); } }
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg); } }
 
 /*# sourceMappingURL=visit_guide.css.map */

@@ -203,39 +203,6 @@ body,html{
 #header .header_nav2 li:hover a{
     color:white;
 }
-//分隔标题
-#separated{
-    display:flex;
-    display:-webkit-flex;
-    flex-direction: row;
-    width:100%;
-    height:0.9rem;
-    padding-top:0.4rem;
-    .separated_left{
-        flex: 1;
-        flex-shrink: 1;
-        height:0.5rem;
-//      background:url(../images/icon_belt.png) no-repeat;
-//      background-size:contain;
-    }
-    .separated_con{
-        flex-shrink:0;
-        width:4.35rem;
-        width:auto !important;
-        min-width:4.35rem;
-        height:0.5rem;
-        background:rgba(255,255,255,.3);
-        border-radius: 0.25rem;
-        box-shadow:0 0 0.05rem 0.05rem rgba(255,255,255,.3);
-    }
-    .separated_right{
-        flex: 1;
-        flex-shrink: 1;
-        height:0.5rem;
-//      background:url(../images/icon_belt3.png)  no-repeat;
-//      background-size:contain;
-    }
-}
 //内容区域
 #main{
     width:9.8rem;
@@ -293,6 +260,7 @@ body,html{
                 float:right;
                 width:2.74rem;
                 height:1.56rem;
+                overflow:hidden;
                 li{
                     width:2.74rem;
                     height:0.2rem;
@@ -534,6 +502,9 @@ body,html{
 }
 //底部
 #footer{
+    position:fixed;
+    left:0;
+    bottom:0;
     width:100%;
     height:1.7rem;
     background:rgba(0,0,0,.7);

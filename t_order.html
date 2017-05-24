@@ -357,8 +357,7 @@
 								<h5>桂花鸭</h5>
 								<button>查看详情</button>
 							</div>
-						</div>
-						
+						</div>						
 					</div>					
 				</div>
 				<!--线路查询-->
@@ -462,5 +461,28 @@
 		})
 		</script>
 		<script type="text/javascript" src="js/main.js" ></script>
+		<script type="text/javascript" src="libs/js/t_order.js"></script>
+		<script type="text/javascript">
+				var xmlhttp;    
+				if (window.XMLHttpRequest)
+				  {// code for IE7+, Firefox, Chrome, Opera, Safari
+				  xmlhttp=new XMLHttpRequest();
+				  }
+				else
+				  {// code for IE6, IE5
+				  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				xmlhttp.onreadystatechange=function()
+				  {
+				  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				    {
+				    alert(xmlhttp.responseText);// 弹出 返回的信息
+				    //document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+				    }
+				  }
+				 xmlhttp.open("GET","http://tcc.taobao.com/cc/json/mobile_tel_segment.htm?tel=15850781443",false);//调用接口，根据电话号码获取 ，归属地信息
+				//xmlhttp.open("GET","/ajax/getcustomer.asp?q="+str,true);  http://tcc.taobao.com/cc/json/mobile_tel_segment.htm?tel=15850781443
+				xmlhttp.send();
+		</script>
 	</body>
 </html>

@@ -6,6 +6,8 @@ $(function(){
 		var img_src = $(this).attr("data_src");
 		$(".main_left_img img:eq(0)").attr("src",img_src)
 	})
+	//首页旅游新闻模块 隐藏p标签
+	$(".main_left_con li").eq(0).siblings().find("p").css("display","none");
 	//选项卡
 	$(".main_right_title li").click(function(){
 		//console.log($(this).index())

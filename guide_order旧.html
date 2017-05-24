@@ -12,10 +12,13 @@
 		<link rel="stylesheet" href="css/culture.css"/>
 		<link rel="stylesheet" href="css/visit_guide.css" />
 		<link rel="stylesheet" href="libs/css/swiper-3.4.0.min.css" />
+		<link rel="stylesheet" href="libs/css/datepicker.css" />
 		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="script/moment.js" ></script>
 		<script type="text/javascript" src="libs/js/rem.js" ></script>
 		<script type="text/javascript"src="libs/js/swiper-3.4.0.min.js"></script>
 		<script type="text/javascript" src="libs/js/jquery-1.11.3.js" ></script>
+		<script type="text/javascript" charset="UTF-8" src="libs/js/bootstrap-datepicker.js" ></script>
 	</head>
 	<body>
 		<header id="header">
@@ -135,20 +138,102 @@
 				</p>
 				<div class="t_sub_con">			
 					<!--订票系统start-->	
-					<div class="t_sub_conlist">					
-						<ul class="orderEntry">
-							<a class="entryItemCon" href="#">
-								<li class="entryItem">
-									<img src="http://www.wwsjq.com/fck/UpLoad/image/%E7%B4%A2%E9%81%932(1).jpg" alt="" />
-									<div class="entryItem_info1">
-										订票系统
-									</div>
-									<div class="entryItem_info2">
-										进入
-									</div>									
-								</li>
-							</a>
-						</ul>
+					<div class="t-sub_order t_sub_conlist">					
+						<ul class="orderTab">
+							<li>
+								<em class="iconfont">&#xe633;</em>
+								<span>酒店</span>
+							</li>
+							<li>
+								<em class="iconfont">&#xe6b1;</em>
+								<span>门票</span>
+							</li>
+							<li>
+								<em class="iconfont">&#xe7b9;</em>
+								<span>车票</span>
+							</li>
+							<li></li>
+						</ul>	
+						<div class="orderContainer">
+							<!--酒店-->
+							<div class="orderConChange">
+								<div class="orderTitle">
+									<span>酒店</span>
+								</div>
+								<div class="orderInfo">
+									<form class="t_online_ticket">	
+										<li>
+											<label for="name1">城市</label>
+											<input id="name1" type="text" placeholder="入住城市" />
+										</li>									
+										<li>
+											<label for="name2">入住</label>
+											<input class="getCalendar" id="name2" type="text" placeholder="入住日期" />
+											<span class="iconfont">&#xe608;</span>
+										</li>
+										<li>
+											<label for="name3">退房</label>
+											<input class="getCalendar" id="name3" type="text" placeholder="退房日期" />
+											<span class="iconfont">&#xe608;</span>
+										</li>	
+										<li></li>
+										<button class="orderBtn">预订</button>
+									</form>
+								</div>
+							</div>
+							<!--门票-->
+							<div class="orderConChange">
+								<div class="orderTitle">
+									<span>门票</span>
+								</div>
+								<div class="orderInfo">
+									<form class="t_online_ticket">									
+										<li>
+											<label for="name1">出发日期</label>
+											<input id="name1" type="text" placeholder="出发日期" />
+											<span class="iconfont">&#xe608;</span>									
+										</li>
+										<li>
+											<label for="name2">票务类型</label>
+											<select class="form-control" id="name2">
+											  <option>成人票</option>
+											  <option>学生票</option>
+											  <option>景点+酒店</option>
+											  <option>团体</option>
+											</select>
+										</li>	
+										<li></li>
+										<button class="orderBtn">预订</button>
+									</form>
+								</div>
+							</div>
+							<!--车票-->
+							<div class="orderConChange">
+								<div class="orderTitle">
+									<span>车票</span>
+								</div>
+								<div class="orderInfo">
+									<form class="t_online_ticket">	
+										<li>
+											<label for="name1">目的地</label>
+											<input  id="name1" type="text" placeholder="到达城市" />
+										</li>									
+										<li>
+											<label for="name2">出发日期</label>
+											<input class="getCalendar" id="name2" type="text" placeholder="出发日期" />
+											<span class="iconfont">&#xe608;</span>
+										</li>
+										<li>
+											<label for="name3">返程日期</label>
+											<input class="getCalendar" id="name3" type="text" placeholder="返程日期" />
+											<span class="iconfont">&#xe608;</span>
+										</li>	
+										<li></li>
+										<button class="orderBtn">预订</button>
+									</form>
+								</div>
+							</div>
+						</div>						
 					</div>	
 					<!--订票系统end-->	
 				</div>
@@ -187,6 +272,23 @@
 		</footer>
 		<!--头部背景渐变-->
 		<div id="t_bg_top"></div>
+		<!--日期调用-->
+		<script type="text/javascript">
+			$(function(){
+				$(".getCalendar").datepicker({});
+			})
+		</script>
+		<!--订票系统选项卡Tab-->
+		<script> 
+			$(function(){
+				$(".orderTab li").on("click",function(){
+					var index = $(this).index();
+					$(this).addClass("orderActive").siblings().removeClass("orderActive");
+					$(".orderConChange").eq(index).css("display","block").siblings().css("display","none");
+				});
+				$(".orderTab li:eq(0)").trigger("click");
+			})
+		</script>
 		<script type="text/javascript" src="js/main.js" ></script>
 	</body>
 </html>

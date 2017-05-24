@@ -1,0 +1,11 @@
+$(function(){
+	$.ajax({
+		type:"get",
+		url:"http://tcc.taobao.com/cc/json/mobile_tel_segment.htm?tel=18337149012",
+		dataType:"jsonp",
+		async:true,
+		success:function(data){
+			console.log(data)
+		}
+	});
+})
