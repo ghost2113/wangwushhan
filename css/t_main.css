@@ -170,6 +170,11 @@ body, html {
 #header .header_nav2 li:hover a {
   color: white; }
 
+#separated {
+  width: 100%;
+  height: 0.9rem;
+  padding-top: 0.4rem; }
+
 #main {
   width: 9.8rem;
   height: 2rem;
@@ -427,9 +432,6 @@ body, html {
   outline: none; }
 
 #footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   height: 1.7rem;
   background: rgba(0, 0, 0, 0.7);
